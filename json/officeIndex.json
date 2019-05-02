@@ -1,12 +1,12 @@
 [
   { "index": 1,
-    "tilte": "Mandatory Programs"},
+    "title": "Mandatory Programs"},
   { "index": 2,
-    "tilte": "Professional Development Programs"},
+    "title": "Professional Development Programs"},
   { "index": 3,
-    "tilte": "Selective Programs"},
+    "title": "Selective Programs"},
   { "index": 4,
-    "tilte": "Training For Retail Stores"},
+    "title": "Training For Retail Stores"},
   { "index": 5,
-    "tilte": "E-Learning Programs (For All RL Employeeds)"}
+    "title": "E-Learning Programs (For All RL Employeeds)"}
 ]

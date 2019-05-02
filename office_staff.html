@@ -4,37 +4,58 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bookStyle.css">
     <script>
       var officeIndex = null;
-      function loadIndexJSON(callback) {   
-        var xobj = new XMLHttpRequest();
-        xobj.overrideMimeType("application/json");
-        xobj.open('GET', 'json/officeIndex.json', true); // Replace 'my_data' with the path to your file
-        xobj.onreadystatechange = function () {
-          if (xobj.readyState == 4 && xobj.status == "200") {
-            callback(xobj.responseText);
+      var officeSubIndex = null;
+      async function LoadIndex() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            officeIndex = JSON.parse(this.responseText);
+            for(var i = 0; i < officeIndex.length; i++) {
+              $("#indexDiv").append("<b><u>" + officeIndex[i].title + "</u></b><br/><div id = '" +officeIndex[i].index  + "'></div><br/>");
+            }
           }
         };
-        xobj.send(null);  
+        xmlhttp.open("GET", "json/officeIndex.json", true);
+        xmlhttp.send();
       }
 
-      function init() {
-        loadIndexJSON(function(response) {
-          // Parse JSON string into object
-          console.log('a')
-          officeIndex = response;
-          console.log(response);
-          
-        });
-      }
-      function DisplayIndex() {
-        console.log(officeIndex)
+      async function LoadSubIndex() {
+        await LoadIndex();
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            officeSubIndex = JSON.parse(this.responseText);
+            for(var i = 0; i < officeIndex.length; i++) {
+              for(var j = 0; j < officeSubIndex.length; j++) {
+                if (officeIndex[i].index == officeSubIndex[j].index) {
+                  $("#" + officeIndex[i].index).append("<a href = 'javascript:changePage(" + officeSubIndex[j].page + ");' style = 'text-decoration:none;'><font style = 'color:gray;font-size:12px;'>P." + officeSubIndex[j].page + "</font> " + officeSubIndex[j].title + "</a><br/>");
+                }
+               
+              }
+            }
+          }
+        };
+        xmlhttp.open("GET", "json/officeSubIndex.json", true);
+        xmlhttp.send();
+      }      
+      LoadSubIndex();
+
+      function changePage(page) {
+        $("#selectIndex").css("display", "none");
+        $("#pdfDiv").css("display", "block");
+        $("#embder").attr("src", "pdf/office_staff_en.pdf#page=" + page);
       }
 
+      function BackIndex() {
+        $("#selectIndex").css("display", "block");
+        $("#pdfDiv").css("display", "none");
+      }
     </script>
     <title>Ralph Lauren Employees</title>
     <style>
@@ -67,9 +88,17 @@
           </div>
         </nav>
 
+      <div class = "container-fluid">
+        <div class = "row">
+          <div class = "col">
+              <a href = "javascript:BackIndex()">Back to Content 返回目錄</a>
+          </div>
+        </div>
+          
+      </div>
       <div id="wrapper">
-        <a href = "#" onclick = "">Back to Content 返回目錄</a>
-        <div id="container" id = "selectIndex" >
+        
+        <div id="selectIndex"  >
             <section class="open-book" style = "min-height:600px">
               <div class = "row">
                 <div class = "col-md">
@@ -116,8 +145,8 @@
               
             </section>
         </div>
-        <div id="container"  id = "pdfDiv" style = "display:none;">
-            <section class="open-book"
+        <div id = "pdfDiv" style = "display:none;">
+            <section class="open-book">
               <embed src="pdf/office_staff_en.pdf" id = "embder"  type="application/pdf" width="100%" height="780px"  style = "z-index:10; border:3px solid gray;"/>
             </section>
     
@@ -127,7 +156,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
