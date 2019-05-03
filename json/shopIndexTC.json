@@ -1,0 +1,14 @@
+[
+  { "index": 1,
+    "title": "強制性 Mandatory Programs"},
+  { "index": 2,
+    "title": "專業發展 Professional Development Programs"},
+  { "index": 3,
+    "title": "選擇性 Selective Programs"},
+  { "index": 4,
+    "title": "產品培訓 Product Training Programs"},
+  { "index": 5,
+    "title": "店經理發展課程 Store Managers Development Programs"},    
+  { "index": 6,
+    "title": "網上學習課程(適合所有RL僱員) E-Learning Programs (For All RL Employeeds)"}
+]

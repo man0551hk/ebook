@@ -21,7 +21,7 @@
             }
           }
         };
-        xmlhttp.open("GET", "json/officeIndex.json", true);
+        xmlhttp.open("GET", "json/shopIndexSC.json", true);
         xmlhttp.send();
       }
 
@@ -40,7 +40,7 @@
             }
           }
         };
-        xmlhttp.open("GET", "json/officeSubIndex.json", true);
+        xmlhttp.open("GET", "json/shopSubIndexSC.json", true);
         xmlhttp.send();
       }      
       LoadSubIndex();
@@ -48,7 +48,7 @@
       function changePage(page) {
         $("#selectIndex").css("display", "none");
         $("#pdfDiv").css("display", "block");
-        $("#embder").attr("src", "pdf/office_staff_en.pdf#page=" + page);
+        $("#embder").attr("src", "pdf/shop_staff_sc.pdf#page=" + page);
       }
 
       function BackIndex() {
@@ -121,7 +121,7 @@
       <div class = "container-fluid">
         <div class = "row">
           <div class = "col">
-              <a href = "javascript:BackIndex()">Back to Content 返回目錄</a>
+              <a href = "javascript:BackIndex()">Back to Content 返回目录</a>
           </div>
         </div>
           
@@ -134,23 +134,14 @@
                 <div class = "col-md">
                     <div class="form">
                         <div class="checkbox-container">
-                            <input type = "checkbox" value = "B" ID = "programCB1" onChange = "SetSelectedArray('programCB1', 'B')"> <label for="programCB1">Back of House Supports</label>
+                            <input type = "checkbox" value = "B" ID = "programCB1" onChange = "SetSelectedArray('programCB1', 'B')"> <label for="programCB1">后勤支援 Back of House Supports</label>
                         </div>
                         <div class="checkbox-container">
-                            <input type = "checkbox" value = "D" ID = "programCB2" onChange = "SetSelectedArray('programCB2', 'D')"> <label for="programCB2">Directors</label>
+                            <input type = "checkbox" value = "A" ID = "programCB3" onChange = "SetSelectedArray('programCB3', 'A')"> <label for="programCB3">员工 Associates</label>
                         </div>
                         <div class="checkbox-container">
-                            <input type = "checkbox" value = "A" ID = "programCB3" onChange = "SetSelectedArray('programCB3', 'A')"> <label for="programCB3">Associates</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type = "checkbox" value = "SD" ID = "programCB4" onChange = "SetSelectedArray('programCB4', 'SD')"> <label for="programCB4">Senior Directors</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type = "checkbox" value = "M" ID = "programCB5" onChange = "SetSelectedArray('programCB5', 'M')"> <label for="programCB5">Managers</label>
-                        </div>
-                        <div class="checkbox-container">
-                            <input type = "checkbox" value = "VP" ID = "programCB6" onChange = "SetSelectedArray('programCB6', 'VP')"> <label for="programCB6">Vice Presidents</label>
-                        </div>                                                                             
+                            <input type = "checkbox" value = "M" ID = "programCB5" onChange = "SetSelectedArray('programCB5', 'M')"> <label for="programCB5">经理 Managers</label>
+                        </div>                                                                          
                     </div>
                     <br/>
                     <div id = "indexDiv">
@@ -158,8 +149,15 @@
                     </div>
                 </div>
                 <div class = "col-md">
+                    <b>亲爱的Ralph Lauren Employees</b><br/>
                     <b>Dear Ralph Lauren Employees,</b>
-                    <br/>
+                    <br/><br/>
+                    我们非常开心地和所有店铺员工分享这使人兴奋的学习目录。<br/>
+                    本目录结合所有教育领域的学习课程，包括专业发展、产品知识，以及销售和服务。<br/>
+                    我们的目标是向每一位Ralph Lauren的员工提供均等的发展机会。<br/>
+                    无论你是在我们的任何一家店铺工作，你即刻就有可以进一步发展的学习工具。<br/>
+                    祝你好运和享受学习！<br/>
+                  <br/>
                     We are pleased to share this exciting Learning Catalogue with all employees in our offices and our stores.
                     <br/><br/>
                     This catalogue combines learning curriculums across all areas of education, including professional development, product knowledge and sales & service.
