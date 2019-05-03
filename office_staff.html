@@ -9,6 +9,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bookStyle.css">
     <script>
+      var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+      };
+
+      window.onload = function() {
+        if (isMobile.any() !== null) {
+          $("#embder").css("display", "none");
+          $("#imageDiv").css("display", "block");
+          for(var i = 1; i <= 62; i++) {
+            var fileName = 'office_staff_en-' + i.toString().padStart(2, '0') + '.jpg';
+            $("#imageDiv").append("<img src = 'pdf/office_staff_en/" + fileName + "' class = 'img-fluid' id = 'image" + i + "'/>");
+          }
+        } else {
+          $("#embder").css("display", "block");
+          $("#imageDiv").css("display", "none");
+        }
+      }
+
       var officeIndex = null;
       var officeSubIndex = null;
       async function LoadIndex() {
@@ -48,7 +83,13 @@
       function changePage(page) {
         $("#selectIndex").css("display", "none");
         $("#pdfDiv").css("display", "block");
-        $("#embder").attr("src", "pdf/office_staff_en.pdf#page=" + page);
+        
+        if (isMobile.any() !== null) {
+          window.location = "office_staff.html?#image" + page;
+          $("#imageDiv").scrollTop(scrollTop);
+        } else {
+          $("#embder").attr("src", "pdf/office_staff_en.pdf#page=" + page);
+        }
       }
 
       function BackIndex() {
@@ -178,6 +219,11 @@
         <div id = "pdfDiv" style = "display:none;">
             <section class="open-book">
               <embed src="pdf/office_staff_en.pdf" id = "embder"  type="application/pdf" width="100%" height="780px"  style = "z-index:10; border:3px solid gray;"/>
+
+              <div id = "imageDiv">
+                
+              </div>
+
             </section>
     
         </div>
