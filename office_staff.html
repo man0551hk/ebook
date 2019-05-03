@@ -79,13 +79,13 @@
         xmlhttp.send();
       }      
       LoadSubIndex();
-
+      //https://pdftoimage.com/
       function changePage(page) {
         $("#selectIndex").css("display", "none");
         $("#pdfDiv").css("display", "block");
         
         if (isMobile.any() !== null) {
-          window.location = "office_staff.html?#image" + page;
+          window.location = "#image" + page;
           $("#imageDiv").scrollTop(scrollTop);
         } else {
           $("#embder").attr("src", "pdf/office_staff_en.pdf#page=" + page);
