@@ -1,12 +1,21 @@
 [
   { "index": 1,
-    "title": "Mandatory Programs"},
+    "title": "Mandatory Programs",
+    "bgColor": "#AE1F5B"},
   { "index": 2,
-    "title": "Professional Development Programs"},
+    "title": "Professional Development Programs",
+    "bgColor": "#814798"
+  },
   { "index": 3,
-    "title": "Selective Programs"},
+    "title": "Selective Programs",
+    "bgColor": "#90C656"
+  },
   { "index": 4,
-    "title": "Training For Retail Stores"},
+    "title": "Training For Retail Stores",
+    "bgColor": "#0081CC"
+  },
   { "index": 5,
-    "title": "E-Learning Programs (For All RL Employeeds)"}
+    "title": "E-Learning Programs (For All RL Employeeds)",
+    "bgColor": "#F08500"
+  }
 ]

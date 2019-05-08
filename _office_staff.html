@@ -8,36 +8,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bookStyle.css">
-    <style>
-      .form{display:flex; flex-direction:column;}
-
-      .checkbox-container input[type="checkbox"]{display:inline-block;}
-      .checkbox-container label{display:inline;}
-
-      .background {
-        background-image: url(images/bg.png);
-        background-repeat: no-repeat;
-        padding: 10px;
-      }
-
-      .header {
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      .spanText {
-        padding-left:5px;
-        padding-right:5px;
-        font-weight:bold;
-        color:#231815;
-      }
-
-      .sectionTitle {
-        font-size: 20px;
-        font-weight: bold;
-        color:#fff;
-      }
-    </style>      
     <script>
       var isMobile = {
         Android: function() {
@@ -82,12 +52,7 @@
           if (this.readyState == 4 && this.status == 200) {
             officeIndex = JSON.parse(this.responseText);
             for(var i = 0; i < officeIndex.length; i++) {
-              $("#indexDiv").append("<div class='col-6' style = 'padding-left:100px; background-color: " + 
-                officeIndex[i].bgColor + "'><div class = 'sectionTitle'>" + officeIndex[i].title + "</div></div>");
-
-              //$("#indexDiv").append("<div class = 'sectionTitle' style = 'background-color: " + officeIndex[i].bgColor + "'>" + officeIndex[i].title + "</div>");
-              //$("#indexDiv").append("<div id = '" +officeIndex[i].index  + "'></div>");
-              //$("#indexDiv").append("<b><u>" + officeIndex[i].title + "</u></b><br/><br/>");
+              $("#indexDiv").append("<b><u>" + officeIndex[i].title + "</u></b><br/><div id = '" +officeIndex[i].index  + "'></div><br/>");
             }
           }
         };
@@ -164,7 +129,12 @@
       }
     </script>
     <title>Ralph Lauren Employees</title>
-  
+    <style>
+      .form{display:flex; flex-direction:column;}
+
+      .checkbox-container input[type="checkbox"]{display:inline-block;}
+      .checkbox-container label{display:inline;}
+    </style>    
   </head>
   <body>
 
@@ -195,72 +165,69 @@
               <a href = "javascript:BackIndex()">Back to Content 返回目錄</a>
           </div>
         </div>
+          
       </div>
+      <div id="wrapper">
+        
+        <div id="selectIndex"  >
+            <section class="open-book" style = "min-height:600px">
+              <div class = "row">
+                <div class = "col-md">
+                    <div class="form">
+                        <div class="checkbox-container">
+                            <input type = "checkbox" value = "B" ID = "programCB1" onChange = "SetSelectedArray('programCB1', 'B')"> <label for="programCB1">Back of House Supports</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type = "checkbox" value = "D" ID = "programCB2" onChange = "SetSelectedArray('programCB2', 'D')"> <label for="programCB2">Directors</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type = "checkbox" value = "A" ID = "programCB3" onChange = "SetSelectedArray('programCB3', 'A')"> <label for="programCB3">Associates</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type = "checkbox" value = "SD" ID = "programCB4" onChange = "SetSelectedArray('programCB4', 'SD')"> <label for="programCB4">Senior Directors</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type = "checkbox" value = "M" ID = "programCB5" onChange = "SetSelectedArray('programCB5', 'M')"> <label for="programCB5">Managers</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type = "checkbox" value = "VP" ID = "programCB6" onChange = "SetSelectedArray('programCB6', 'VP')"> <label for="programCB6">Vice Presidents</label>
+                        </div>                                                                             
+                    </div>
+                    <br/>
+                    <div id = "indexDiv">
 
-      <div class = "container-fluid">
-
-        <div class = "row" style = "padding-bottom:10px">
-          <div class = "col">
-            <div class = "header">PROGRAM FOR</div>
-          </div>
-        </div>
-
-        <div class = "background">
-          <div class = "row" style = "padding-bottom:15px;">
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB1"><img src = "images/bBtn.png"/><span class = "spanText" >Back of House Support</span></label>
-                  <input type = "checkbox" value = "B" ID = "programCB1" onChange = "SetSelectedArray('programCB1', 'B')"> 
+                    </div>
                 </div>
-            </div>
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB4"><img src = "images/sdBtn.png"/><span class = "spanText" >Senior Directors</span></label>
-                  <input type = "checkbox" value = "SD" ID = "programCB4" onChange = "SetSelectedArray('programCB4', 'SD')">
+                <div class = "col-md">
+                    <b>Dear Ralph Lauren Employees,</b>
+                    <br/>
+                    We are pleased to share this exciting Learning Catalogue with all employees in our offices and our stores.
+                    <br/><br/>
+                    This catalogue combines learning curriculums across all areas of education, including professional development, product knowledge and sales & service.
+                    <br/><br/>
+                    The objective is to offer everyone an equal opportunity to develop themselves as Ralph Lauren Employees.
+                    <br/><br/>
+                    
+                    Whether you work in one of our stores or the office, you now have the tools you need to further your deve,opment as an employee.
+                    <br/><br/>
+                    Good Luck and Enjoy!
                 </div>
-            </div>
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB2"><img src = "images/dBtn.png"/><span class = "spanText" >Directors</span></label>
-                  <input type = "checkbox" value = "D" ID = "programCB2" onChange = "SetSelectedArray('programCB2', 'D')">
-                </div>
-            </div>          
-          </div>
-
-          <div class = "row" style = "padding-bottom:25px;">
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB3"><img src = "images/aBtn.png"/><span class = "spanText" >Associates</span></label>
-                  <input type = "checkbox" value = "A" ID = "programCB3" onChange = "SetSelectedArray('programCB3', 'A')"> 
-                </div>
-            </div>
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB5"><img src = "images/mBtn.png"/><span class = "spanText" >Managers</span></label>
-                  <input type = "checkbox" value = "M" ID = "programCB5" onChange = "SetSelectedArray('programCB5', 'M')">
-                </div>
-            </div>
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB6"><img src = "images/vpBtn.png"/><span class = "spanText" >Vice Presidents</span></label>
-                  <input type = "checkbox" value = "VP" ID = "programCB6" onChange = "SetSelectedArray('programCB6', 'VP')">
-                </div>
-            </div>          
-          </div>
-
-          <div class = "row" style = "padding-bottom:25px;">
-              <div class = "col-3" style="padding-left:45px; font-weight: bold; font-size: 30px; line-height: 30px;" >
-                PROGRAMS<br/>
-                AT A GLANCE
               </div>
-          </div>
-
-          <div id = "indexDiv">
-
-          </div>
-
+              
+            </section>
         </div>
-      </div>
+        <div id = "pdfDiv" style = "display:none;">
+            <section class="open-book">
+              <embed src="pdf/office_staff_en.pdf" id = "embder"  type="application/pdf" width="100%" height="780px"  style = "z-index:10; border:3px solid gray;"/>
+
+              <div id = "imageDiv">
+                
+              </div>
+
+            </section>
+    
+        </div>
+      </div>      
 
 
     <!-- Optional JavaScript -->
