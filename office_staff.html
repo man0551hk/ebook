@@ -18,6 +18,12 @@
         background-image: url(images/bg.png);
         background-repeat: no-repeat;
         padding: 10px;
+        padding-left:0px;
+        background-size: 270px;
+        background-color: #fff;
+        width: 931px;
+        height: 475px;
+        overflow-y: auto;
       }
 
       .header {
@@ -37,6 +43,28 @@
         font-weight: bold;
         color:#fff;
       }
+
+      #container {
+        background-image: url(images/book.png);
+        width: 960px;
+        height: 540px;
+        background-repeat: no-repeat;
+        background-size: 960px 540px;
+        padding-left: 29px;
+        margin: auto;
+      }
+
+      table {
+        font-size:13px;
+      }
+
+      #imageDiv {
+        padding: 10px;
+        padding-left:0px;
+        width: 931px;
+        height: 475px;
+        overflow-y: auto;
+      }      
     </style>      
     <script>
       var isMobile = {
@@ -61,17 +89,20 @@
       };
 
       window.onload = function() {
-        if (isMobile.any() !== null) {
+        LoadSubIndex();
           $("#embder").css("display", "none");
-          $("#imageDiv").css("display", "block");
-          for(var i = 1; i <= 62; i++) {
-            var fileName = 'office_staff_en-' + i.toString().padStart(2, '0') + '.jpg';
-            $("#imageDiv").append("<img src = 'pdf/office_staff_en/" + fileName + "' class = 'img-fluid' id = 'image" + i + "'/>");
-          }
-        } else {
-          $("#embder").css("display", "block");
           $("#imageDiv").css("display", "none");
-        }
+        // if (isMobile.any() !== null) {
+        //   $("#embder").css("display", "none");
+        //   $("#imageDiv").css("display", "block");
+          for(var i = 1; i <= 45; i++) {
+            var fileName = 'RL(eng)-' + i.toString().padStart(2, '0') + '.jpg';
+            $("#imageDiv").append("<img src = 'pdf/RL(eng)/" + fileName + "' class = 'img-fluid' id = 'image" + i + "'/>");
+          }
+        // } else {
+        //   $("#embder").css("display", "none");
+        //   $("#imageDiv").css("display", "none");
+        // }
       }
 
       var officeIndex = null;
@@ -82,12 +113,11 @@
           if (this.readyState == 4 && this.status == 200) {
             officeIndex = JSON.parse(this.responseText);
             for(var i = 0; i < officeIndex.length; i++) {
-              $("#indexDiv").append("<div class='col-6' style = 'padding-left:100px; background-color: " + 
-                officeIndex[i].bgColor + "'><div class = 'sectionTitle'>" + officeIndex[i].title + "</div></div>");
-
-              //$("#indexDiv").append("<div class = 'sectionTitle' style = 'background-color: " + officeIndex[i].bgColor + "'>" + officeIndex[i].title + "</div>");
-              //$("#indexDiv").append("<div id = '" +officeIndex[i].index  + "'></div>");
-              //$("#indexDiv").append("<b><u>" + officeIndex[i].title + "</u></b><br/><br/>");
+              $("#indexDiv").append("<div class='col' style = 'background-color: " + 
+                officeIndex[i].bgColor + "'><div class = 'sectionTitle'>" + officeIndex[i].title + "</div></div><i style = 'font-size:11px;'>Page</i>");
+              $("#indexDiv").append("<table id = '" +officeIndex[i].index  + "'>");
+   
+              $("#indexDiv").append("</table>");
             }
           }
         };
@@ -104,7 +134,31 @@
             for(var i = 0; i < officeIndex.length; i++) {
               for(var j = 0; j < officeSubIndex.length; j++) {
                 if (officeIndex[i].index == officeSubIndex[j].index) {
-                  $("#" + officeIndex[i].index).append("<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' style = 'text-decoration:none;'><font style = 'color:gray;font-size:12px;'>P." + officeSubIndex[j].page + "</font> " + officeSubIndex[j].title + "</a><br/>");
+                  $("#" + officeIndex[i].index).append("<tr>");
+                    $("#" + officeIndex[i].index).append("<td width = 'width:26px;' align = 'right'><a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' style = 'text-decoration:none;color:gray;'>" + officeSubIndex[j].page  + "</a></td>");
+                    $("#" + officeIndex[i].index).append("<td style = 'padding-left:10px;width:350px;'><a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' style = 'text-decoration:none;color:#000;'>" + officeSubIndex[j].title  + "</a></td>");
+                    $("#" + officeIndex[i].index).append("<td>");
+                    
+                    if ( officeSubIndex[j].type.B) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.B == 'show' ? "<img src = 'images/bBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/bBtn_hide.png' height = '20'/>&nbsp;");
+                    }                    
+                    if ( officeSubIndex[j].type.A) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.A == 'show' ? "<img src = 'images/aBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/aBtn_hide.png' height = '20'/>&nbsp;");
+                    } 
+                    if ( officeSubIndex[j].type.M) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.M == 'show' ? "<img src = 'images/mBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/mBtn_hide.png' height = '20'/>&nbsp;");
+                    }
+                    if ( officeSubIndex[j].type.D) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.D == 'show' ? "<img src = 'images/dBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/dBtn_hide.png' height = '20'/>&nbsp;");
+                    }
+                    if ( officeSubIndex[j].type.SD) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.SD == 'show' ? "<img src = 'images/sdBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/sdBtn_hide.png' height = '20'/>&nbsp;");
+                    }
+                    if ( officeSubIndex[j].type.VP) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.VP == 'show' ? "<img src = 'images/vpBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/vpBtn_hide.png' height = '20'/>&nbsp;");
+                    }
+                    $("#" + officeIndex[i].index).append("</td>");
+                  $("#" + officeIndex[i].index).append("</tr>");
                 }
               }
             }
@@ -113,23 +167,24 @@
         xmlhttp.open("GET", "json/officeSubIndex.json", true);
         xmlhttp.send();
       }      
-      LoadSubIndex();
-      //https://pdftoimage.com/
+
+
       function changePage(page) {
-        $("#selectIndex").css("display", "none");
-        $("#pdfDiv").css("display", "block");
-        
-        if (isMobile.any() !== null) {
-          window.location = "#image" + page;
-          $("#imageDiv").scrollTop(scrollTop);
-        } else {
-          $("#embder").attr("src", "pdf/office_staff_en.pdf#page=" + page);
-        }
+        $(".background").css("display", "none");
+        $("#imageDiv").css("display", "block");
+        window.location = "#image" + page;
+        // if (isMobile.any() !== null) {
+        //   window.location = "#image" + page;
+        //   $("#imageDiv").scrollTop(scrollTop);
+        // } else {
+        //   $("#embder").css("display", "block");
+        //   $("#embder").attr("src", "pdf/RL(eng).pdf#page=" + page + "&zoom=150");
+        // }
       }
 
       function BackIndex() {
-        $("#selectIndex").css("display", "block");
-        $("#pdfDiv").css("display", "none");
+        $(".background").css("display", "block");
+        $("#imageDiv").css("display", "none");
       }
 
       var selectedType = [];
@@ -148,19 +203,52 @@
 
       function RefreshIndex() {
         $("#indexDiv").html("");
+
         for(var i = 0; i < officeIndex.length; i++) {
-          $("#indexDiv").append("<b><u>" + officeIndex[i].title + "</u></b><br/><div id = '" +officeIndex[i].index  + "'></div><br/>");
+          $("#indexDiv").append("<div class='col' style = 'background-color: " + 
+                officeIndex[i].bgColor + "'><div class = 'sectionTitle'>" + officeIndex[i].title + "</div></div><i style = 'font-size:11px;'>Page</i>");
+
+          $("#indexDiv").append("<table id = '" +officeIndex[i].index  + "'>");
+
           for(var j = 0; j < officeSubIndex.length; j++) {
             if (officeIndex[i].index == officeSubIndex[j].index) {
               for(var k = 0; k < selectedType.length; k++) {
-                if (officeSubIndex[j].type.includes(selectedType[k])) {
-                  $("#" + officeIndex[i].index).append("<a href = 'javascript:changePage(" + officeSubIndex[j].page + ");' style = 'text-decoration:none;'><font style = 'color:gray;font-size:12px;'>P." + officeSubIndex[j].page + "</font> " + officeSubIndex[j].title + "</a><br/>");
+                if (officeSubIndex[j].type[selectedType[k]] == "show") {
+                  //$("#" + officeIndex[i].index).append("<a href = 'javascript:changePage(" + officeSubIndex[j].page + ");' style = 'text-decoration:none;'><font style = 'color:gray;font-size:12px;'>P." + officeSubIndex[j].page + "</font> " + officeSubIndex[j].title + "</a><br/>");
+
+                  $("#" + officeIndex[i].index).append("<tr>");
+                    $("#" + officeIndex[i].index).append("<td width = 'width:26px;' align = 'right'><a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' style = 'text-decoration:none;color:gray;'>" + officeSubIndex[j].page  + "</a></td>");
+                    $("#" + officeIndex[i].index).append("<td style = 'padding-left:10px;width:350px;'><a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' style = 'text-decoration:none;color:#000;'>" + officeSubIndex[j].title  + "</a></td>");
+                    $("#" + officeIndex[i].index).append("<td>");
+                    
+                    if ( officeSubIndex[j].type.B) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.B == 'show' ? "<img src = 'images/bBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/bBtn_hide.png' height = '20'/>&nbsp;");
+                    }                    
+                    if ( officeSubIndex[j].type.A) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.A == 'show' ? "<img src = 'images/aBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/aBtn_hide.png' height = '20'/>&nbsp;");
+                    } 
+                    if ( officeSubIndex[j].type.M) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.M == 'show' ? "<img src = 'images/mBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/mBtn_hide.png' height = '20'/>&nbsp;");
+                    }
+                    if ( officeSubIndex[j].type.D) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.D == 'show' ? "<img src = 'images/dBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/dBtn_hide.png' height = '20'/>&nbsp;");
+                    }
+                    if ( officeSubIndex[j].type.SD) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.SD == 'show' ? "<img src = 'images/sdBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/sdBtn_hide.png' height = '20'/>&nbsp;");
+                    }
+                    if ( officeSubIndex[j].type.VP) {
+                      $("#" + officeIndex[i].index).append(officeSubIndex[j].type.VP == 'show' ? "<img src = 'images/vpBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/vpBtn_hide.png' height = '20'/>&nbsp;");
+                    }
+                    $("#" + officeIndex[i].index).append("</td>");
+                  $("#" + officeIndex[i].index).append("</tr>");
                   break;
                 }
               }
             }
           }
+          $("#indexDiv").append("</div>");
         }
+       
       }
     </script>
     <title>Ralph Lauren Employees</title>
@@ -190,75 +278,81 @@
         </nav>
 
       <div class = "container-fluid">
-        <div class = "row">
+        <div class = "row ">
           <div class = "col">
-              <a href = "javascript:BackIndex()">Back to Content 返回目錄</a>
+              
           </div>
         </div>
       </div>
 
-      <div class = "container-fluid">
+      <div class = "container-fluid" >
 
-        <div class = "row" style = "padding-bottom:10px">
-          <div class = "col">
-            <div class = "header">PROGRAM FOR</div>
-          </div>
-        </div>
 
-        <div class = "background">
-          <div class = "row" style = "padding-bottom:15px;">
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB1"><img src = "images/bBtn.png"/><span class = "spanText" >Back of House Support</span></label>
-                  <input type = "checkbox" value = "B" ID = "programCB1" onChange = "SetSelectedArray('programCB1', 'B')"> 
-                </div>
-            </div>
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB4"><img src = "images/sdBtn.png"/><span class = "spanText" >Senior Directors</span></label>
-                  <input type = "checkbox" value = "SD" ID = "programCB4" onChange = "SetSelectedArray('programCB4', 'SD')">
-                </div>
-            </div>
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB2"><img src = "images/dBtn.png"/><span class = "spanText" >Directors</span></label>
-                  <input type = "checkbox" value = "D" ID = "programCB2" onChange = "SetSelectedArray('programCB2', 'D')">
-                </div>
-            </div>          
-          </div>
-
-          <div class = "row" style = "padding-bottom:25px;">
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB3"><img src = "images/aBtn.png"/><span class = "spanText" >Associates</span></label>
-                  <input type = "checkbox" value = "A" ID = "programCB3" onChange = "SetSelectedArray('programCB3', 'A')"> 
-                </div>
-            </div>
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB5"><img src = "images/mBtn.png"/><span class = "spanText" >Managers</span></label>
-                  <input type = "checkbox" value = "M" ID = "programCB5" onChange = "SetSelectedArray('programCB5', 'M')">
-                </div>
-            </div>
-            <div class = "col-3 " >
-                <div class="checkbox-container">
-                  <label for="programCB6"><img src = "images/vpBtn.png"/><span class = "spanText" >Vice Presidents</span></label>
-                  <input type = "checkbox" value = "VP" ID = "programCB6" onChange = "SetSelectedArray('programCB6', 'VP')">
-                </div>
-            </div>          
-          </div>
-
-          <div class = "row" style = "padding-bottom:25px;">
-              <div class = "col-3" style="padding-left:45px; font-weight: bold; font-size: 30px; line-height: 30px;" >
-                PROGRAMS<br/>
-                AT A GLANCE
+        <div id = "container">
+          <a href = "javascript:BackIndex()">Back to Content 返回目錄</a>
+          <div class = "background">
+            <div class = "row" style = "padding-bottom:10px">
+              <div class = "col">
+                <div class = "header">PROGRAM FOR</div>
               </div>
+            </div>             
+            <div class = "row" style = "padding-bottom:15px;padding-left:10px;">
+              <div class = "col-4 " >
+                  <div class="checkbox-container">
+                    <label for="programCB1"><img src = "images/bBtn.png"/><span class = "spanText" >Back of House Support</span></label>
+                    <input type = "checkbox" value = "B" ID = "programCB1" onChange = "SetSelectedArray('programCB1', 'B')"> 
+                  </div>
+              </div>
+              <div class = "col-4 " >
+                  <div class="checkbox-container">
+                    <label for="programCB4"><img src = "images/sdBtn.png"/><span class = "spanText" >Senior Directors</span></label>
+                    <input type = "checkbox" value = "SD" ID = "programCB4" onChange = "SetSelectedArray('programCB4', 'SD')">
+                  </div>
+              </div>
+              <div class = "col-4 " >
+                  <div class="checkbox-container">
+                    <label for="programCB2"><img src = "images/dBtn.png"/><span class = "spanText" >Directors</span></label>
+                    <input type = "checkbox" value = "D" ID = "programCB2" onChange = "SetSelectedArray('programCB2', 'D')">
+                  </div>
+              </div>          
+            </div>
+
+            <div class = "row" style = "padding-bottom:25px;padding-left:10px;">
+              <div class = "col-4 " >
+                  <div class="checkbox-container">
+                    <label for="programCB3"><img src = "images/aBtn.png"/><span class = "spanText" >Associates</span></label>
+                    <input type = "checkbox" value = "A" ID = "programCB3" onChange = "SetSelectedArray('programCB3', 'A')"> 
+                  </div>
+              </div>
+              <div class = "col-4 " >
+                  <div class="checkbox-container">
+                    <label for="programCB5"><img src = "images/mBtn.png"/><span class = "spanText" >Managers</span></label>
+                    <input type = "checkbox" value = "M" ID = "programCB5" onChange = "SetSelectedArray('programCB5', 'M')">
+                  </div>
+              </div>
+              <div class = "col-4 " >
+                  <div class="checkbox-container">
+                    <label for="programCB6"><img src = "images/vpBtn.png"/><span class = "spanText" >Vice Presidents</span></label>
+                    <input type = "checkbox" value = "VP" ID = "programCB6" onChange = "SetSelectedArray('programCB6', 'VP')">
+                  </div>
+              </div>          
+            </div>
+
+            <div class = "row" style = "padding-bottom:25px;">
+                <div class = "col" style="padding-left:45px; font-weight: bold; font-size: 30px; line-height: 30px;" >
+                  PROGRAMS<br/>
+                  AT A GLANCE
+                </div>
+            </div>
+
+            <div id = "indexDiv">
+
+            </div>
+
           </div>
-
-          <div id = "indexDiv">
+          <div id = "imageDiv">
 
           </div>
-
         </div>
       </div>
 
