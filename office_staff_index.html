@@ -130,7 +130,10 @@
       function LoadImage() {
         for(var i = 1; i <= 45; i++) {
           var fileName = 'RL(eng)-' + i.toString().padStart(2, '0') + '.jpg';
-          $("#imageDiv").append("<img src = 'pdf/RL(eng)/" + fileName + "' class = 'img-fluid' id = 'image" + i + "'  name = 'image" + i + "'/>");
+          var image = "<div id = 'image" + i + "'  name = 'image" + i + "'>";
+          image += "<img src = 'pdf/RL(eng)/" + fileName + "' class = 'img-fluid' />";
+          image += "</div>";
+          $("#imageDiv").append(image);
         }
       }
 
@@ -207,7 +210,8 @@
         $("#menuSelector").css("display", "none");
         $("#menuContent").css("display", "none");
         $("#imageDiv").css("display", "block");
-        window.location = "#image" + page;
+        var elmnt = document.getElementById("image" + page);
+        elmnt.scrollIntoView();
       }      
 
 
@@ -215,7 +219,8 @@
         $("#menuSelector").css("display", "block");
         $("#menuContent").css("display", "block");
         $("#imageDiv").css("display", "none");
-        window.location = "#image1";
+        var elmnt = document.getElementById("image1");
+        elmnt.scrollIntoView();
       }
 
       var selectedType = [];
@@ -303,10 +308,10 @@
             <a class="nav-link" href="office_staff.html">Office Learning Catalogue</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="shop_staff_tc.html">專賣店學習目錄</a>
+              <a class="nav-link" href="store_staff_tc.html">專賣店學習目錄</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="shop_staff_sc.html">专卖店学习目录</a>
+              <a class="nav-link" href="store_staff_sc.html">专卖店学习目录</a>
           </li>              
         </ul>
       </div>
