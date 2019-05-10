@@ -1,14 +1,26 @@
 [
   { "index": 1,
-    "title": "強制性 Mandatory Programs"},
+    "title": "強制性",
+    "bgColor": "#9b3159"
+  },
   { "index": 2,
-    "title": "專業發展 Professional Development Programs"},
+    "title": "專業發展",
+    "bgColor": "#814798"
+  },
   { "index": 3,
-    "title": "選擇性 Selective Programs"},
+    "title": "選擇性",
+    "bgColor": "#98c570"
+  },
   { "index": 4,
-    "title": "產品培訓 Product Training Programs"},
+    "title": "產品培訓",
+    "bgColor": "#3789c9"
+  },
   { "index": 5,
-    "title": "店經理發展課程 Store Managers Development Programs"},    
+    "title": "店經理發展課程",
+    "bgColor": "#459fa1"
+  },
   { "index": 6,
-    "title": "網上學習課程(適合所有RL僱員) E-Learning Programs (For All RL Employeeds)"}
+    "title": "網上學習課程(適合所有RL僱員)",
+    "bgColor": "#e7893c"
+  }
 ]

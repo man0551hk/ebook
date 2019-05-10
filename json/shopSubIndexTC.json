@@ -1,160 +1,310 @@
 [
   { "index": 1,
-    "title": "新人培訓課程 <sub>New Hire Orientation</sub>",
+    "title": "新人培訓課程",
+    "page": 6,
+    "goPage": 163,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "show"
+    }
+  },
+  { "index": 1,
+    "title": "RALPH LAUREN 尊重與包容文化",
+    "page": 7,
+    "goPage": 7,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "show"
+    }
+  },  
+  { "index": 1,
+    "title": "銷售的藝術",
+    "page": 8,
+    "goPage": 184,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "show"
+    }
+  },
+  { "index": 1,
+    "title": "有效的晨會",
+    "page": 9,
+    "goPage": 9,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
+  { "index": 1,
+    "title": "RL方式 <br/><i style = 'font-size:11px;'><i>5C鎖售和服務體驗</i>",
+    "page": 10,
+    "goPage": 10,
+    "type": {
+      "B": "show",
+      "A": "show",
+      "M": "show"
+    }
+  },
+  { "index": 1,
+    "title": "續效管理系列<br/><i style = 'font-size:11px;'>發展規劃和目標設置</i>",
     "page": 11,
-    "goPage": 13,
-    "type": [ "A", "M"]},
+    "goPage": 11,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "show"
+    }
+  },
   { "index": 1,
-    "title": "銷售的藝術 <sub>Art of Selling</sub>",
+    "title": "續效管理系列<br/><i style = 'font-size:11px;'>評估培訓</i>",
     "page": 12,
-    "goPage": 14,
-    "type": [ "A", "M"]},
+    "goPage": 12,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "show"
+    }
+  },
   { "index": 1,
-    "title": "有效的晨會 <sub>Effective Huddle</sub>",
+    "title": "組織有效的溝通",
     "page": 13,
-    "goPage": 15,
-    "type": ["M"]},
+    "goPage": 13,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "show"
+    }
+  },    
   { "index": 1,
-    "title": "RL方式 <sub>RL Way</sub><br/><sub style = 'padding-left:25px;'><i>5C鎖售和服務體驗 5C Selling and Service Experience</i></sub>",
+    "title": "發展你的才能",
     "page": 14,
-    "goPage": 16,
-    "type": [ "B", "A", "M"]},
+    "goPage": 14,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },    
   { "index": 1,
-    "title": "續效管理系列 <sub>Performance Management Series</sub><br/><sub style = 'padding-left:25px;'><i>發展規劃和目標設置 Development Planning and Goal Setting</i></sub>",
+    "title": "專注於你的個人發展",
     "page": 15,
-    "goPage": 17,
-    "type": ["A", "M"]},
-  { "index": 1,
-    "title": "續效管理系列 <sub>Performance Management Series</sub><br/><sub style = 'padding-left:25px;'><i>評估培訓 Appraisal Training</i></sub>",
+    "goPage": 15,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "hide"
+    }
+  },  
+
+
+  { "index": 2,
+    "title": "提供反饋以培育你的員工",
     "page": 16,
-    "goPage": 18,
-    "type": ["A", "M"]},
-  { "index": 1,
-    "title": "組織有效的溝通 <sub>Knitting Your Communication</sub>",
+    "goPage": 16,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
+  { "index": 2,
+    "title":  "21世紀的領導力 (適合銷售後勤人員)",
     "page": 17,
-    "goPage": 19,
-    "type": ["A", "M"]},    
-  { "index": 1,
-    "title": "發展你的才能 <sub>Developing Your Talent</sub>",
+    "goPage": 17,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "hide"
+    }
+  },
+  { "index": 2,
+    "title": "選才策略工作坊",
     "page": 18,
-    "goPage": 20,
-    "type": ["M"]},    
-  { "index": 1,
-    "title": "專注於你的個人發展 <sub>Focusing on Your Personal Development</sub>",
-    "page": 19,
-    "goPage": 21,
-    "type": ["A"]},  
-
-
-  { "index": 2,
-    "title": "提供反饋以培育你的員工 <sub>Giving Feedback To Develop Your People</sub>",
-    "page": 21,
-    "goPage": 23,
-    "type": ["M"]},
-  { "index": 2,
-    "title":  "21世紀的領導力 (適合銷售後勤人員) <sub>Leadership in The 21st Century (For Associates)</sub>",
-    "page": 22,
-    "goPage": 24,
-    "type": ["A"]},
-  { "index": 2,
-    "title": "選才策略工作坊 <sub>Selecting High-Caliber Talent</sub>",
-    "page": 23,
-    "goPage": 25,
-    "type": ["M"]},
+    "goPage": 18,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
 
     
   { "index": 3,
-    "title": "Mission Enablement 獲奬課程 <sub>Mission Enablement Award Winning Programs</sub>",
+    "title": "工作生活平衡系列",
+    "page": 19,
+    "goPage": 19,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "show"
+    }
+  },
+  { "index": 3,
+    "title": "MBTI - 進階銷售",
+    "page": 20,
+    "goPage": 20,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "hide"
+    }
+  },
+
+
+  { "index": 4,
+    "title": "當季產品培訓 - 店舖",
+    "page": 21,
+    "goPage": 21,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "show"
+    }
+  },
+  { "index": 4,
+    "title": "特殊產品培訓 - 店舖",
+    "page": 22,
+    "goPage": 22,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "show"
+    }
+  },
+
+  { "index": 5,
+    "title": "店經理發展課程",
+    "page": 23,
+    "goPage": 23,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
+  { "index": 5,
+    "title": "店舖營運和系統",
     "page": 25,
-    "goPage": 27,
-    "type": ["A", "M"]},
-  { "index": 3,
-    "title": "工作生活平衡系列 <sub>Work-life Balance Series</sub>",
+    "goPage": 254,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
+  { "index": 5,
+    "title": "商業知識",
     "page": 26,
-    "goPage": 28,
-    "type":["A", "M"]},
-  { "index": 3,
-    "title": "MBTI - 進階銷售 <sub>MBTI in Advance Selling</sub>",
+    "goPage": 26,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
+  { "index": 5,
+    "title": "商業技能101",
     "page": 27,
-    "goPage": 29,
-    "type": ["A"]},
-
-
-  { "index": 4,
-    "title": "當季產品培訓 - 店舖 <sub>Seasonal Product Training - Store</sub>",
+    "goPage": 27,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
+  { "index": 5,
+    "title": "時間管理和獲取成果",
+    "page": 28,
+    "goPage": 28,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
+  { "index": 5,
+    "title": "領導力精要",
     "page": 29,
-    "goPage": 31,
-    "type": ["A", "M"]},
-  { "index": 4,
-    "title": "特殊產品培訓 - 店舖 <sub>Specific Product Training - Store</sub>",
+    "goPage": 29,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },    
+  { "index": 5,
+    "title": "問題解決與決策",
     "page": 30,
-    "goPage": 32,
-    "type": [ "A", "M"]},
-
+    "goPage": 30,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },   
   { "index": 5,
-    "title": "店經理發展課程 <sub>Store Managers Development Program</sub>",
+    "title": "21世紀的領導力",
+    "page": 31,
+    "goPage": 31,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
+  { "index": 5,
+    "title": "選才策略工作坊",
     "page": 32,
-    "goPage": 34,
-    "type": [ "M"]},
+    "goPage": 32,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
   { "index": 5,
-    "title": "店舖營運和系統 <sub>Store Operation &amp; System</sub>",
+    "title": "發展你的才能",
+    "page": 33,
+    "goPage": 33,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },   
+  { "index": 5,
+    "title": "指導以步向成功",
     "page": 34,
-    "goPage": 36,
-    "type": [ "M"]},
+    "goPage": 34,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
   { "index": 5,
-    "title": "商業知識 <sub>Business Knowledge</sub>",
+    "title": "商業本領和企業家思維",
     "page": 35,
-    "goPage": 37,
-    "type": [ "M"]},
-  { "index": 5,
-    "title": "商業技能101 <sub>Business Acumen 101</sub>",
-    "page": 36,
-    "goPage": 38,
-    "type": [ "M"]},
-  { "index": 5,
-    "title": "時間管理和獲取成果 <sub>Managing Time And Getting Results</sub>",
-    "page": 37,
-    "goPage": 39,
-    "type": [ "M"]},
-  { "index": 5,
-    "title": "領導力精要 <sub>Essentials of Leadership</sub>",
-    "page": 38,
-    "goPage": 40,
-    "type": ["M"]},    
-  { "index": 5,
-    "title": "問題解決與決策 <sub>Problem Solving & Decision Making</sub>",
-    "page": 39,
-    "goPage": 41,
-    "type": [ "M"]},   
-  { "index": 5,
-    "title": "21世紀的領導力 <sub>Leadership in the 21st Century</sub>",
-    "page": 40,
-    "goPage": 42,
-    "type": [ "M"]},
-  { "index": 5,
-    "title": "選才策略工作坊 <sub>Selecting High Caliber Talent</sub>",
-    "page": 41,
-    "goPage": 43,
-    "type": [ "M"]},
-  { "index": 5,
-    "title": "發展你的才能 <sub>Developing Your Talent</sub>",
-    "page": 42,
-    "goPage": 44,
-    "type": [ "M"]},   
-  { "index": 5,
-    "title": "指導以步向成功 <sub>Coaching for Success</sub>",
-    "page": 43,
-    "goPage": 45,
-    "type": [ "M"]},
-  { "index": 5,
-    "title": "商業本領和企業家思維 <sub>Business Savvy Entrepreneurialship</sub>",
-    "page": 44,
-    "goPage": 46,
-    "type": [ "M"]},
+    "goPage": 35,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
 
   { "index": 6,
-    "title": "網上學習課程 - 亞太地區語言<br/>E-Learning Programs - APAC Languages",
-    "page": 46,
-    "goPage": 48,
-    "type": ["B", "A", "M"]}    
+    "title": "網上學習課程 - 亞太地區語言",
+    "page": 36,
+    "goPage": 36,
+    "type": {
+      "B": "show",
+      "A": "show",
+      "M": "show"
+    }
+  }    
 ]

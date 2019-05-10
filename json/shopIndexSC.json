@@ -1,14 +1,26 @@
 [
   { "index": 1,
-    "title": "強制性 Mandatory Programs"},
+    "title": "強制性",
+    "bgColor": "#9b3159"
+  },
   { "index": 2,
-    "title": "专业发展 Professional Development Programs"},
+    "title": "专业发展",
+    "bgColor": "#814798"
+  },
   { "index": 3,
-    "title": "选择性 Selective Programs"},
+    "title": "选择性",
+    "bgColor": "#98c570"
+  },
   { "index": 4,
-    "title": "产品培训 Product Training Programs"},
+    "title": "产品培训",
+    "bgColor": "#3789c9"
+  },
   { "index": 5,
-    "title": "店经理发展课程 Store Managers Development Programs"},    
+    "title": "店经理发展课程",
+    "bgColor": "#459fa1"
+  },
   { "index": 6,
-    "title": "网上学习课程(适合所有RL雇员) E-Learning Programs (For All RL Employeeds)"}
+    "title": "网上学习课程(适合所有RL雇员)",
+    "bgColor": "#e7893c"
+  }
 ]
