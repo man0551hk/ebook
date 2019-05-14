@@ -1,8 +1,18 @@
 [
-  { "index": 1,
-    "title": "新人培訓課程",
+  {
+    "index": 0,
+    "title": "進入學習網站<br/>ACCESSING THE LEARNING PORTAL",
+    "page": 4,
+    "goPage": 4,
+    "type": {
+
+    }
+  },
+  { 
+    "index": 1,
+    "title": "新人培訓課程<br>New Hire Orientation",
     "page": 6,
-    "goPage": 163,
+    "goPage":  6,
     "type": {
       "B": "hide",
       "A": "show",
@@ -10,7 +20,7 @@
     }
   },
   { "index": 1,
-    "title": "RALPH LAUREN 尊重與包容文化",
+    "title": "RALPH LAUREN 尊重與包容文化<br/>Respect &amp; Inclusion at Ralph Lauren",
     "page": 7,
     "goPage": 7,
     "type": {
@@ -20,7 +30,7 @@
     }
   },  
   { "index": 1,
-    "title": "銷售的藝術",
+    "title": "銷售的藝術<br/>Art of Selling",
     "page": 8,
     "goPage": 184,
     "type": {
@@ -30,7 +40,7 @@
     }
   },
   { "index": 1,
-    "title": "有效的晨會",
+    "title": "有效的晨會<br/>Effective Huddle",
     "page": 9,
     "goPage": 9,
     "type": {
@@ -40,7 +50,7 @@
     }
   },
   { "index": 1,
-    "title": "RL方式 <br/><i style = 'font-size:11px;'><i>5C鎖售和服務體驗</i>",
+    "title": "RL方式<br/>RL Way<br/><i style = 'font-size:11px;padding-left:10px;'>5C鎖售和服務體驗</i><br/><i style = 'font-size:11px;padding-left:10px;'>5C Selling and Service Experience</i>",
     "page": 10,
     "goPage": 10,
     "type": {
@@ -50,7 +60,7 @@
     }
   },
   { "index": 1,
-    "title": "續效管理系列<br/><i style = 'font-size:11px;'>發展規劃和目標設置</i>",
+    "title": "續效管理系列<br/>Performance Management Series<br/><i style = 'font-size:11px;padding-left:10px;'>發展規劃和目標設置</i><br/><i style = 'font-size:11px;padding-left:10px;'>Development Planning and Goal Setting</i>",
     "page": 11,
     "goPage": 11,
     "type": {
@@ -60,7 +70,7 @@
     }
   },
   { "index": 1,
-    "title": "續效管理系列<br/><i style = 'font-size:11px;'>評估培訓</i>",
+    "title": "續效管理系列<br/>Performance Management Series<br/><i style = 'font-size:11px;padding-left:10px;'>評估培訓</i><br/><i style = 'font-size:11px;padding-left:10px;'>Appraisal Training</i>",
     "page": 12,
     "goPage": 12,
     "type": {
@@ -70,7 +80,7 @@
     }
   },
   { "index": 1,
-    "title": "組織有效的溝通",
+    "title": "組織有效的溝通<br/>Knitting Your Communication",
     "page": 13,
     "goPage": 13,
     "type": {
@@ -80,7 +90,7 @@
     }
   },    
   { "index": 1,
-    "title": "發展你的才能",
+    "title": "發展你的才能<br/>Developing Your Talent",
     "page": 14,
     "goPage": 14,
     "type": {
@@ -90,7 +100,7 @@
     }
   },    
   { "index": 1,
-    "title": "專注於你的個人發展",
+    "title": "專注於你的個人發展<br/>Focusing on Your Personal Development",
     "page": 15,
     "goPage": 15,
     "type": {
@@ -102,7 +112,7 @@
 
 
   { "index": 2,
-    "title": "提供反饋以培育你的員工",
+    "title": "提供反饋以培育你的員工<br/>Giving Feedback To Develop Your People",
     "page": 16,
     "goPage": 16,
     "type": {
@@ -112,7 +122,7 @@
     }
   },
   { "index": 2,
-    "title":  "21世紀的領導力 (適合銷售後勤人員)",
+    "title":  "21世紀的領導力 (適合銷售後勤人員)<br/>Leadership In The 21st Century (For Associates)",
     "page": 17,
     "goPage": 17,
     "type": {
@@ -122,7 +132,7 @@
     }
   },
   { "index": 2,
-    "title": "選才策略工作坊",
+    "title": "選才策略工作坊<br/>Selecting High-Caliber Talent",
     "page": 18,
     "goPage": 18,
     "type": {
@@ -134,7 +144,7 @@
 
     
   { "index": 3,
-    "title": "工作生活平衡系列",
+    "title": "工作生活平衡系列<br/>Work-life Balance Series",
     "page": 19,
     "goPage": 19,
     "type": {
@@ -144,7 +154,7 @@
     }
   },
   { "index": 3,
-    "title": "MBTI - 進階銷售",
+    "title": "MBTI - 進階銷售<br/>MBTI in Advance Selling",
     "page": 20,
     "goPage": 20,
     "type": {
@@ -156,7 +166,7 @@
 
 
   { "index": 4,
-    "title": "當季產品培訓 - 店舖",
+    "title": "當季產品培訓 - 店舖<br/>Seasonal Product Training - Store",
     "page": 21,
     "goPage": 21,
     "type": {
@@ -166,7 +176,7 @@
     }
   },
   { "index": 4,
-    "title": "特殊產品培訓 - 店舖",
+    "title": "特殊產品培訓 - 店舖<br/>Specific Product Training - Store",
     "page": 22,
     "goPage": 22,
     "type": {
@@ -177,7 +187,7 @@
   },
 
   { "index": 5,
-    "title": "店經理發展課程",
+    "title": "店經理發展課程<br/>Store Managers Development Program",
     "page": 23,
     "goPage": 23,
     "type": {
@@ -187,7 +197,7 @@
     }
   },
   { "index": 5,
-    "title": "店舖營運和系統",
+    "title": "店舖營運和系統<br/>Store Operation & System",
     "page": 25,
     "goPage": 254,
     "type": {
@@ -197,7 +207,7 @@
     }
   },
   { "index": 5,
-    "title": "商業知識",
+    "title": "商業知識<br/>Business Knowledge",
     "page": 26,
     "goPage": 26,
     "type": {
@@ -207,7 +217,7 @@
     }
   },
   { "index": 5,
-    "title": "商業技能101",
+    "title": "商業技能101<br/>Business Acumen 101",
     "page": 27,
     "goPage": 27,
     "type": {
@@ -217,7 +227,7 @@
     }
   },
   { "index": 5,
-    "title": "時間管理和獲取成果",
+    "title": "時間管理和獲取成果<br/>Managing Time And Getting Results",
     "page": 28,
     "goPage": 28,
     "type": {
@@ -227,7 +237,7 @@
     }
   },
   { "index": 5,
-    "title": "領導力精要",
+    "title": "領導力精要<br/>Essentials of Leadership",
     "page": 29,
     "goPage": 29,
     "type": {
@@ -237,7 +247,7 @@
     }
   },    
   { "index": 5,
-    "title": "問題解決與決策",
+    "title": "問題解決與決策<br/>Problem Solving & Decision Making",
     "page": 30,
     "goPage": 30,
     "type": {
@@ -247,7 +257,7 @@
     }
   },   
   { "index": 5,
-    "title": "21世紀的領導力",
+    "title": "21世紀的領導力<br/>Leadership in the 21st Century",
     "page": 31,
     "goPage": 31,
     "type": {
@@ -257,7 +267,7 @@
     }
   },
   { "index": 5,
-    "title": "選才策略工作坊",
+    "title": "選才策略工作坊<br/>Selecting High Caliber Talent",
     "page": 32,
     "goPage": 32,
     "type": {
@@ -267,7 +277,7 @@
     }
   },
   { "index": 5,
-    "title": "發展你的才能",
+    "title": "發展你的才能<br/>Developing Your Talent",
     "page": 33,
     "goPage": 33,
     "type": {
@@ -277,7 +287,7 @@
     }
   },   
   { "index": 5,
-    "title": "指導以步向成功",
+    "title": "指導以步向成功<br/>Coaching for Success",
     "page": 34,
     "goPage": 34,
     "type": {
@@ -287,7 +297,7 @@
     }
   },
   { "index": 5,
-    "title": "商業本領和企業家思維",
+    "title": "商業本領和企業家思維<br/>Business Savvy Entrepreneurialship",
     "page": 35,
     "goPage": 35,
     "type": {
@@ -298,7 +308,7 @@
   },
 
   { "index": 6,
-    "title": "網上學習課程 - 亞太地區語言",
+    "title": "網上學習課程 - 亞太地區語言<br/>E-Learning Programs - APAC Languages",
     "page": 36,
     "goPage": 36,
     "type": {

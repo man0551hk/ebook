@@ -13,6 +13,7 @@
         width: 1024px;
         padding-right:0px;
         padding-left:0px;
+        padding-top:30px;
       }
       .mobileContainer {
         max-height: 540px;
@@ -71,6 +72,13 @@
       }
       .menuTitle {
         color:#000;
+        text-decoration: none;
+      }
+      .menuTitle:hover {
+        text-decoration: none;
+      }
+      .img-fluid {
+        max-width: 90%;
       }
     </style>
     <script>
@@ -148,10 +156,10 @@
               for(var j = 0; j < officeSubIndex.length; j++) {
                
                 if (officeIndex[i].index == officeSubIndex[j].index) {
-                  var content = "<div class = 'row'>";
-                    content += "<div class = 'col-md-1 col-1'>";
-                      content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'page'>" + officeSubIndex[j].page + "</a>";
-                    content += "</div>";
+                  var content = "<div class = 'row' style = 'padding-bottom:5px;padding-top:5px;'>";
+                    // content += "<div class = 'col-md-1 col-1'>";
+                    //   content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'page'>" + officeSubIndex[j].page + "</a>";
+                    // content += "</div>";
                     content += "<div class = 'col-md-6 col-5'>";
                       content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'menuTitle'>" + officeSubIndex[j].title + "</a>";
                     content += "</div>";
@@ -197,7 +205,7 @@
               var menuContent = "<div class='col' style = 'background-color: " + officeIndex[i].bgColor + "'>";
                 menuContent += "<div class = 'sectionTitle'>" + officeIndex[i].title  + "</div>";
               menuContent += "</div>";
-              menuContent += "<div class='col'><i style = 'font-size:11px;'>Page</i></div>";
+              // menuContent += "<div class='col'><i style = 'font-size:11px;'>Page</i></div>";
               menuContent += "<div id = '" +officeIndex[i].index  + "' style = 'padding-left: 25px;'></div>";
               $("#menuContent").append(menuContent);
             }
@@ -211,6 +219,7 @@
         $("#menuSelector").css("display", "none");
         $("#menuContent").css("display", "none");
         $("#imageDiv").css("display", "block");
+        $("#backIndex").css("display", "block");
         var elmnt = document.getElementById("image" + page);
         elmnt.scrollIntoView();
       }      
@@ -220,7 +229,8 @@
         $("#menuSelector").css("display", "block");
         $("#menuContent").css("display", "block");
         $("#imageDiv").css("display", "none");
-        var elmnt = document.getElementById("image1");
+        $("#backIndex").css("display", "none");
+        var elmnt = document.getElementById("menuSelector");
         elmnt.scrollIntoView();
       }
 
@@ -250,17 +260,17 @@
           var menuContent = "<div class='col' style = 'background-color: " + officeIndex[i].bgColor + "'>";
                 menuContent += "<div class = 'sectionTitle'>" + officeIndex[i].title  + "</div>";
               menuContent += "</div>";
-              menuContent += "<div class='col'><i style = 'font-size:11px;'>Page</i></div>";
-              menuContent += "<div id = '" +officeIndex[i].index  + "' style = 'padding-left: 25px;'></div>";
+              // menuContent += "<div class='col'><i style = 'font-size:11px;'>Page</i></div>";
+              menuContent += "<div id = '" +officeIndex[i].index  + "' style = 'padding-left: 25px;min-height:30px;'></div>";
           $("#menuContent").append(menuContent);
           for(var j = 0; j < officeSubIndex.length; j++) {
             if (officeIndex[i].index == officeSubIndex[j].index) {
               for(var k = 0; k < selectedType.length; k++) {
                 if (officeSubIndex[j].type[selectedType[k]] == "show") {
                   var content = "<div class = 'row'>";
-                    content += "<div class = 'col-md-1 col-1'>";
-                      content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'page'>" + officeSubIndex[j].page + "</a>";
-                    content += "</div>";
+                    // content += "<div class = 'col-md-1 col-1'>";
+                    //   content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'page'>" + officeSubIndex[j].page + "</a>";
+                    // content += "</div>";
                     content += "<div class = 'col-md-6 col-5'>";
                       content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'menuTitle'>" + officeSubIndex[j].title + "</a>";
                     content += "</div>";
@@ -323,26 +333,31 @@
 
       </div>
       <div class = "row" id = "indexRow">
-        <a href = "javascript:BackIndex()" style = "padding-bottom:15px;padding-left:40px;">返回目录</a>
+        <a href = "javascript:BackIndex()" style = "padding-bottom:15px;padding-left:40px;display:none;" id = "backIndex">返回目录 Back to Program List</a>
 
         <div id = "indexDiv">
           <div id = "menuSelector">
             <div class = "row" style = "padding-bottom:15px;padding-left:10px;">
               <div class = "col-md-4 col-12" style = "padding-bottom:5px;" >
+                  请选择 Please choose
+              </div>
+            </div>              
+            <div class = "row" style = "padding-bottom:15px;padding-left:10px;">
+              <div class = "col-md-4 col-12" style = "padding-bottom:5px;" >
                   <div class="checkbox-container">
-                    <label for="programCB1"><img src = "images/bBtn.png"/><span class = "spanText" >后勤支援</span></label>
+                    <label for="programCB1"><img src = "images/bBtn.png"/><span class = "spanText" >后勤支援 Back of House Support</span></label>
                     <input type = "checkbox" value = "B" ID = "programCB1" onChange = "SetSelectedArray('programCB1', 'B')"> 
                   </div>
               </div>       
               <div class = "col-md-4 col-12" style = "padding-bottom:5px;" >
                   <div class="checkbox-container">
-                    <label for="programCB3"><img src = "images/aBtn.png"/><span class = "spanText" >员工</span></label>
+                    <label for="programCB3"><img src = "images/aBtn.png"/><span class = "spanText" >员工 Associates</span></label>
                     <input type = "checkbox" value = "A" ID = "programCB3" onChange = "SetSelectedArray('programCB3', 'A')"> 
                   </div>
               </div>
               <div class = "col-md-4 col-12" style = "padding-bottom:5px;" >
                   <div class="checkbox-container">
-                    <label for="programCB5"><img src = "images/mBtn.png"/><span class = "spanText" >经理</span></label>
+                    <label for="programCB5"><img src = "images/mBtn.png"/><span class = "spanText" >经理 Managers</span></label>
                     <input type = "checkbox" value = "M" ID = "programCB5" onChange = "SetSelectedArray('programCB5', 'M')">
                   </div>
               </div>        
@@ -350,7 +365,9 @@
 
             <div class = "row" style = "padding-bottom:25px;">
                 <div class = "col" id = "heading">
-                    课程一览
+                    课程一览<br/>
+                    PROGRAMS<br/>
+                    AT A GLANCE
                 </div>
             </div>
           </div>
