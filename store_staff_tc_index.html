@@ -55,6 +55,7 @@
         margin-top:5px;
         max-height:723px;
         overflow-y: auto;
+        overflow-x: hidden;
       }
       #heading {
         padding-left:45px; font-weight: bold; font-size: 30px; line-height: 30px;
@@ -331,20 +332,20 @@
         <div id = "indexDiv">
           <div id = "menuSelector">
             <div class = "row" style = "padding-bottom:15px;padding-left:10px;">
-              <div class = "col-md-4 col-12" >
+              <div class = "col-md-4 col-12" style = "padding-bottom:5px;" >
                   <div class="checkbox-container">
                     <label for="programCB1"><img src = "images/bBtn.png"/><span class = "spanText" >後勤支援</span></label>
                     <input type = "checkbox" value = "B" ID = "programCB1" onChange = "SetSelectedArray('programCB1', 'B')"> 
                   </div>
               </div>       
-              <div class = "col-md-4 col-12" >
+              <div class = "col-md-4 col-12" style = "padding-bottom:5px;" >
                   <div class="checkbox-container">
                     <label for="programCB3"><img src = "images/aBtn.png"/><span class = "spanText" >員工</span></label>
                     <input type = "checkbox" value = "A" ID = "programCB3" onChange = "SetSelectedArray('programCB3', 'A')"> 
                   </div>
               </div>
               <div class = "col-md-4 col-12" >
-                  <div class="checkbox-container">
+                  <div class="checkbox-container" style = "padding-bottom:5px;" >
                     <label for="programCB5"><img src = "images/mBtn.png"/><span class = "spanText" >經理</span></label>
                     <input type = "checkbox" value = "M" ID = "programCB5" onChange = "SetSelectedArray('programCB5', 'M')">
                   </div>
