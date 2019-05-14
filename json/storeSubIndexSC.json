@@ -5,7 +5,9 @@
     "page": 4,
     "goPage": 4,
     "type": {
-
+      "B": "show",
+      "A": "show",
+      "M": "show"
     }
   },  
   { "index": 1,

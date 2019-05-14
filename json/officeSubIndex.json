@@ -5,7 +5,12 @@
     "page": 4,
     "goPage": 4,
     "type": {
-
+      "A": "show",
+      "M": "show",
+      "D": "show",
+      "SD": "show",
+      "VP": "show",
+      "B": "show"
     }
   },
   { "index": 1,

@@ -4,6 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -112,6 +115,10 @@
           $("#navMenu").css("display", "none");
           $("#container").removeClass('mobileContainer').addClass('desktopContainer');
           imageClass = 'img-fluid-80';
+          console.log($( window ).height());
+          // if ($( window ).height() < 768) {
+          //   $("#indexRow").css("height", "600px");
+          // }
         } else {
           imageClass = 'img-fluid';
           isMobile = true;
@@ -171,27 +178,28 @@
                       content += "<div class = 'col-md-6 col-5'>";
                         content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'menuTitle'>" + officeSubIndex[j].title + "</a>";
                       content += "</div>";
+                    
+                      content += "<div class = 'col-md-5 col-5'>";
+                        if ( officeSubIndex[j].type.B) {
+                          content += officeSubIndex[j].type.B == 'show' ? "<img src = 'images/bBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/bBtn_hide.png' height = '20'/>&nbsp;";
+                        }                    
+                        if ( officeSubIndex[j].type.A) {
+                          content += officeSubIndex[j].type.A == 'show' ? "<img src = 'images/aBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/aBtn_hide.png' height = '20'/>&nbsp;";
+                        } 
+                        if ( officeSubIndex[j].type.M) {
+                          content += officeSubIndex[j].type.M == 'show' ? "<img src = 'images/mBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/mBtn_hide.png' height = '20'/>&nbsp;";
+                        }
+                        if ( officeSubIndex[j].type.D) {
+                          content += officeSubIndex[j].type.D == 'show' ? "<img src = 'images/dBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/dBtn_hide.png' height = '20'/>&nbsp;";
+                        }
+                        if ( officeSubIndex[j].type.SD) {
+                          content += officeSubIndex[j].type.SD == 'show' ? "<img src = 'images/sdBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/sdBtn_hide.png' height = '20'/>&nbsp;";
+                        }
+                        if ( officeSubIndex[j].type.VP) {
+                          content += officeSubIndex[j].type.VP == 'show' ? "<img src = 'images/vpBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/vpBtn_hide.png' height = '20'/>&nbsp;";
+                        }
+                      content += "</div>";
                     }
-                    content += "<div class = 'col-md-5 col-5'>";
-                      if ( officeSubIndex[j].type.B) {
-                        content += officeSubIndex[j].type.B == 'show' ? "<img src = 'images/bBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/bBtn_hide.png' height = '20'/>&nbsp;";
-                      }                    
-                      if ( officeSubIndex[j].type.A) {
-                        content += officeSubIndex[j].type.A == 'show' ? "<img src = 'images/aBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/aBtn_hide.png' height = '20'/>&nbsp;";
-                      } 
-                      if ( officeSubIndex[j].type.M) {
-                        content += officeSubIndex[j].type.M == 'show' ? "<img src = 'images/mBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/mBtn_hide.png' height = '20'/>&nbsp;";
-                      }
-                      if ( officeSubIndex[j].type.D) {
-                        content += officeSubIndex[j].type.D == 'show' ? "<img src = 'images/dBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/dBtn_hide.png' height = '20'/>&nbsp;";
-                      }
-                      if ( officeSubIndex[j].type.SD) {
-                        content += officeSubIndex[j].type.SD == 'show' ? "<img src = 'images/sdBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/sdBtn_hide.png' height = '20'/>&nbsp;";
-                      }
-                      if ( officeSubIndex[j].type.VP) {
-                        content += officeSubIndex[j].type.VP == 'show' ? "<img src = 'images/vpBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/vpBtn_hide.png' height = '20'/>&nbsp;";
-                      }
-                    content += "</div>";
                   content += "</div>";
 
                   $("#" + officeIndex[i].index).append(content);
@@ -280,34 +288,40 @@
             if (officeIndex[i].index == officeSubIndex[j].index) {
               for(var k = 0; k < selectedType.length; k++) {
                 if (officeSubIndex[j].type[selectedType[k]] == "show") {
-                  var content = "<div class = 'row'>";
+                  var content = "<div class = 'row' style = 'padding-bottom:5px;padding-top:5px;'>";
                     // content += "<div class = 'col-md-1 col-1'>";
                     //   content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'page'>" + officeSubIndex[j].page + "</a>";
                     // content += "</div>";
-                    content += "<div class = 'col-md-6 col-5'>";
-                      content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'menuTitle'>" + officeSubIndex[j].title + "</a>";
+                    if (officeIndex[i].index == 0) {
+                      content += "<div class = 'col-12'>";
+                        content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'menuTitle'>" + officeSubIndex[j].title + "</a>";
+                      content += "</div>";
+                    } else {                      
+                      content += "<div class = 'col-md-6 col-5'>";
+                        content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'menuTitle'>" + officeSubIndex[j].title + "</a>";
+                      content += "</div>";
+                      content += "<div class = 'col-md-5 col-5'>";
+                        if ( officeSubIndex[j].type.B) {
+                          content += officeSubIndex[j].type.B == 'show' ? "<img src = 'images/bBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/bBtn_hide.png' height = '20'/>&nbsp;";
+                        }                    
+                        if ( officeSubIndex[j].type.A) {
+                          content += officeSubIndex[j].type.A == 'show' ? "<img src = 'images/aBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/aBtn_hide.png' height = '20'/>&nbsp;";
+                        } 
+                        if ( officeSubIndex[j].type.M) {
+                          content += officeSubIndex[j].type.M == 'show' ? "<img src = 'images/mBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/mBtn_hide.png' height = '20'/>&nbsp;";
+                        }
+                        if ( officeSubIndex[j].type.D) {
+                          content += officeSubIndex[j].type.D == 'show' ? "<img src = 'images/dBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/dBtn_hide.png' height = '20'/>&nbsp;";
+                        }
+                        if ( officeSubIndex[j].type.SD) {
+                          content += officeSubIndex[j].type.SD == 'show' ? "<img src = 'images/sdBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/sdBtn_hide.png' height = '20'/>&nbsp;";
+                        }
+                        if ( officeSubIndex[j].type.VP) {
+                          content += officeSubIndex[j].type.VP == 'show' ? "<img src = 'images/vpBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/vpBtn_hide.png' height = '20'/>&nbsp;";
+                        }
+                      content += "</div>";
                     content += "</div>";
-                    content += "<div class = 'col-md-5 col-5'>";
-                      if ( officeSubIndex[j].type.B) {
-                        content += officeSubIndex[j].type.B == 'show' ? "<img src = 'images/bBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/bBtn_hide.png' height = '20'/>&nbsp;";
-                      }                    
-                      if ( officeSubIndex[j].type.A) {
-                        content += officeSubIndex[j].type.A == 'show' ? "<img src = 'images/aBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/aBtn_hide.png' height = '20'/>&nbsp;";
-                      } 
-                      if ( officeSubIndex[j].type.M) {
-                        content += officeSubIndex[j].type.M == 'show' ? "<img src = 'images/mBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/mBtn_hide.png' height = '20'/>&nbsp;";
-                      }
-                      if ( officeSubIndex[j].type.D) {
-                        content += officeSubIndex[j].type.D == 'show' ? "<img src = 'images/dBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/dBtn_hide.png' height = '20'/>&nbsp;";
-                      }
-                      if ( officeSubIndex[j].type.SD) {
-                        content += officeSubIndex[j].type.SD == 'show' ? "<img src = 'images/sdBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/sdBtn_hide.png' height = '20'/>&nbsp;";
-                      }
-                      if ( officeSubIndex[j].type.VP) {
-                        content += officeSubIndex[j].type.VP == 'show' ? "<img src = 'images/vpBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/vpBtn_hide.png' height = '20'/>&nbsp;";
-                      }
-                    content += "</div>";
-                  content += "</div>";
+                    }
 
                   $("#" + officeIndex[i].index).append(content);
                   break;
@@ -356,7 +370,7 @@
               </div>
             </div>            
             <div class = "row" style = "padding-bottom:15px;padding-left:10px;">
-              <div class = "col-md-4 col-12" style = "padding-bottom:5px;" >
+              <div class = "col-md-5 col-12" style = "padding-bottom:5px;" >
                   <div class="checkbox-container">
                     <label for="programCB1"><img src = "images/bBtn.png"/><span class = "spanText" >後勤支援 Back of House Support</span></label>
                     <input type = "checkbox" value = "B" ID = "programCB1" onChange = "SetSelectedArray('programCB1', 'B')"> 
@@ -368,7 +382,7 @@
                     <input type = "checkbox" value = "A" ID = "programCB3" onChange = "SetSelectedArray('programCB3', 'A')"> 
                   </div>
               </div>
-              <div class = "col-md-4 col-12" >
+              <div class = "col-md-3 col-12" >
                   <div class="checkbox-container" style = "padding-bottom:5px;" >
                     <label for="programCB5"><img src = "images/mBtn.png"/><span class = "spanText" >經理 Managers</span></label>
                     <input type = "checkbox" value = "M" ID = "programCB5" onChange = "SetSelectedArray('programCB5', 'M')">
