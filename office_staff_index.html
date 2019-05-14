@@ -79,8 +79,8 @@
       .menuTitle:hover {
         text-decoration: none;
       }
-      .img-fluid {
-        max-width: 90%;
+      .img-fluid-80 {
+        width: 80%;
       }
     </style>
     <script>
@@ -108,11 +108,14 @@
         }
       };
       var isMobile = false;
+      var imageClass = 'img-fluid-80';
       window.onload = function() {
         if ($( window ).width() >= 1024) {
           $("#navMenu").css("display", "none");
           $("#container").removeClass('mobileContainer').addClass('desktopContainer');
+          imageClass = 'img-fluid-80';
         } else {
+          imageClass = 'img-fluid';
           isMobile = true;
           $("#navMenu").css("display", "block");
           $("#container").removeClass('desktopContainer');
@@ -142,7 +145,7 @@
         for(var i = 1; i <= 45; i++) {
           var fileName = 'RL(eng)-' + i.toString().padStart(2, '0') + '.jpg';
           var image = "<div id = 'image" + i + "'  name = 'image" + i + "'>";
-          image += "<img src = 'pdf/RL(eng)/" + fileName + "' class = 'img-fluid' />";
+          image += "<img src = 'pdf/RL(eng)/" + fileName + "' class = '" + imageClass + "' />";
           image += "</div>";
           $("#imageDiv").append(image);
         }
