@@ -163,9 +163,15 @@
                     // content += "<div class = 'col-md-1 col-1'>";
                     //   content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'page'>" + officeSubIndex[j].page + "</a>";
                     // content += "</div>";
-                    content += "<div class = 'col-md-6 col-5'>";
-                      content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'menuTitle'>" + officeSubIndex[j].title + "</a>";
-                    content += "</div>";
+                    if (officeIndex[i].index == 0) {
+                      content += "<div class = 'col'>";
+                        content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'menuTitle'>" + officeSubIndex[j].title + "</a>";
+                      content += "</div>";
+                    } else {  
+                      content += "<div class = 'col-md-6 col-5'>";
+                        content += "<a href = 'javascript:changePage(" + officeSubIndex[j].goPage + ");' class = 'menuTitle'>" + officeSubIndex[j].title + "</a>";
+                      content += "</div>";
+                    }
                     content += "<div class = 'col-md-5 col-5'>";
                       if ( officeSubIndex[j].type.B) {
                         content += officeSubIndex[j].type.B == 'show' ? "<img src = 'images/bBtn.png' height = '20'/>&nbsp;" : "<img src = 'images/bBtn_hide.png' height = '20'/>&nbsp;";

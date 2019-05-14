@@ -1,4 +1,9 @@
 [
+  {
+    "index": 0,
+    "title": "",
+    "bgColor": ""
+  },
   { "index": 1,
     "title": "Mandatory Programs",
     "bgColor": "#AE1F5B"},
