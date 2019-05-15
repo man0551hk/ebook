@@ -115,16 +115,16 @@
           $("#navMenu").css("display", "none");
           $("#container").removeClass('mobileContainer').addClass('desktopContainer');
           imageClass = 'img-fluid-80';
-          console.log($( window ).height());
-          // if ($( window ).height() < 768) {
-          //   $("#indexRow").css("height", "600px");
-          // }
+          if ($( window ).height() < 768) {
+            $("#indexDiv").css("height", "600px");
+          }
         } else {
           imageClass = 'img-fluid';
           isMobile = true;
           $("#navMenu").css("display", "block");
           $("#container").removeClass('desktopContainer');
           $("#container").addClass('mobileContainer');
+          $(".spanText").css("font-size", "0.9em");
           var width = $( window ).width() - 30;
           var ratio = width / 1024;
           var headerHeight = width / 1024;

@@ -117,6 +117,9 @@
           $("#navMenu").css("display", "none");
           $("#container").removeClass('mobileContainer').addClass('desktopContainer');
           imageClass = 'img-fluid-80';
+          if ($( window ).height() < 768) {
+            $("#indexDiv").css("height", "600px");
+          }          
         } else {
           imageClass = 'img-fluid';
           isMobile = true;
