@@ -38,7 +38,7 @@
     }
   },
   { "index": 1,
-    "title": "Performance Management Series<br/><i style = 'font-size:11px;'>Development Planning and Goal Setting</i>",
+    "title": "Our Next Great Chapter",
     "page": 8,
     "goPage": 8,
     "type": {
@@ -48,9 +48,9 @@
       "SD": "show",
       "VP": "show"
     }
-  },
+  },  
   { "index": 1,
-    "title": "Performance Management Series<br/><i style = 'font-size:11px;'>Appraisal Training</i>",
+    "title": "Performance Management Series<br/><i style = 'font-size:11px;'>Development Planning and Goal Setting</i>",
     "page": 9,
     "goPage": 9,
     "type": {
@@ -62,7 +62,7 @@
     }
   },
   { "index": 1,
-    "title": "Knitting Your Communication",
+    "title": "Performance Management Series<br/><i style = 'font-size:11px;'>Appraisal Training</i>",
     "page": 10,
     "goPage": 10,
     "type": {
@@ -74,9 +74,21 @@
     }
   },
   { "index": 1,
-    "title": "Developing Your Talent",
+    "title": "Knitting Your Communication",
     "page": 11,
     "goPage": 11,
+    "type": {
+      "A": "show",
+      "M": "show",
+      "D": "show",
+      "SD": "show",
+      "VP": "show"
+    }
+  },
+  { "index": 1,
+    "title": "Developing Your Talent",
+    "page": 12,
+    "goPage": 12,
     "type": {
       "A": "hide",
       "M": "show",
@@ -87,8 +99,8 @@
   },
   { "index": 1,
     "title": "Focusing on Your Personal Development",
-    "page": 12,
-    "goPage": 12,
+    "page": 13,
+    "goPage": 13,
     "type": {
       "A": "show",
       "M": "hide",
@@ -100,8 +112,8 @@
 
   { "index": 2,
     "title": "Building Relationshops<br/><i style = 'font-size:11px;'>Strength Delpoyment Inventory (SDI)</i>",
-    "page": 13,
-    "goPage": 13,
+    "page": 14,
+    "goPage": 14,
     "type": {
       "A": "show",
       "M": "show",
@@ -112,8 +124,8 @@
   }, 
   { "index": 2,
     "title": "Essentials of Leadership",
-    "page": 14,
-    "goPage": 14,
+    "page": 15,
+    "goPage": 15,
     "type": {
       "A": "hide",
       "M": "show",
@@ -124,8 +136,8 @@
   }, 
   { "index": 2,
     "title": "Giving Feedback To Develop Your People",
-    "page": 15,
-    "goPage": 15,
+    "page": 16,
+    "goPage": 16,
     "type": {
       "A": "hide",
       "M": "show",
@@ -136,8 +148,8 @@
   }, 
   { "index": 2,
     "title": "High Impact Presentation",
-    "page": 16,
-    "goPage": 16,
+    "page": 17,
+    "goPage": 17,
     "type": {
       "A": "hide",
       "M": "hide",
@@ -148,8 +160,8 @@
   }, 
   { "index": 2,
     "title": "Leadership In The 21st Century",
-    "page": 17,
-    "goPage": 17,
+    "page": 18,
+    "goPage": 18,
     "type": {
       "A": "hide",
       "M": "show",
@@ -160,18 +172,6 @@
   }, 
   { "index": 2,
     "title": "Leadership In The 21st Century (For Associates)",
-    "page": 18,
-    "goPage": 18,
-    "type": {
-      "A": "show",
-      "M": "hide",
-      "D": "hide",
-      "SD": "hide",
-      "VP": "hide"
-    }
-  }, 
-  { "index": 2,
-    "title": "Managing Time &amp; Getting Results",
     "page": 19,
     "goPage": 19,
     "type": {
@@ -183,9 +183,21 @@
     }
   }, 
   { "index": 2,
-    "title": "Presentations That Engage",
+    "title": "Managing Time &amp; Getting Results",
     "page": 20,
     "goPage": 20,
+    "type": {
+      "A": "show",
+      "M": "hide",
+      "D": "hide",
+      "SD": "hide",
+      "VP": "hide"
+    }
+  }, 
+  { "index": 2,
+    "title": "Presentations That Engage",
+    "page": 21,
+    "goPage": 21,
     "type": {
       "A": "hide",
       "M": "show",
@@ -196,8 +208,8 @@
   }, 
   { "index": 2,
     "title": "Selecting High-Caliber Talent",
-    "page": 21,
-    "goPage": 21,
+    "page": 22,
+    "goPage": 22,
     "type": {
       "A": "hide",
       "M": "show",
@@ -208,8 +220,8 @@
   },
   { "index": 2,
     "title": "Speak With Confidence!",
-    "page": 22,
-    "goPage": 22,
+    "page": 23,
+    "goPage": 23,
     "type": {
       "A": "hide",
       "M": "show",
@@ -220,8 +232,8 @@
   },
   { "index": 2,
     "title": "Understand your Personality Type<br/><i style = 'font-size:11px;'>Myers-Briggs Type Indicator (MBTI)</i></sub>",
-    "page": 23,
-    "goPage": 23,
+    "page": 24,
+    "goPage": 24,
     "type": {
       "A": "show",
       "M": "show",
@@ -232,8 +244,8 @@
   },
   { "index": 2,
     "title": "Extraordinary Leaders",
-    "page": 24,
-    "goPage": 24,
+    "page": 25,
+    "goPage": 25,
     "type": {
       "A": "hide",
       "M": "hide",
@@ -244,8 +256,8 @@
   },
   { "index": 2,
     "title": "APAC Directors' Learning Week",
-    "page": 25,
-    "goPage": 25,
+    "page": 26,
+    "goPage": 26,
     "type": {
       "A": "hide",
       "M": "hide",
@@ -256,8 +268,8 @@
   },
   { "index": 2,
     "title": "\"RUNWAY\" Series",
-    "page": 26,
-    "goPage": 26,
+    "page": 27,
+    "goPage": 27,
     "type": {
       "A": "hide",
       "M": "show",
@@ -268,8 +280,8 @@
   },
   { "index": 2,
     "title": "Executive Coaching",
-    "page": 27,
-    "goPage": 27,
+    "page": 28,
+    "goPage": 28,
     "type": {
       "A": "hide",
       "M": "hide",
@@ -280,8 +292,8 @@
   },
   { "index": 2,
     "title": "360 Feedback Report: TLP",
-    "page": 28,
-    "goPage": 28,
+    "page": 29,
+    "goPage": 29,
     "type": {
       "A": "hide",
       "M": "hide",
@@ -292,18 +304,6 @@
   },
   { "index": 2,
     "title": "Mentoring Program",
-    "page": 29,
-    "goPage": 29,
-    "type": {
-      "A": "hide",
-      "M": "hide",
-      "D": "hide",
-      "SD": "show",
-      "VP": "show"
-    }
-  }, 
-  { "index": 2,
-    "title": "Bespoke",
     "page": 30,
     "goPage": 30,
     "type": {
@@ -314,11 +314,47 @@
       "VP": "show"
     }
   }, 
+  { "index": 2,
+    "title": "Bespoke",
+    "page": 31,
+    "goPage": 31,
+    "type": {
+      "A": "hide",
+      "M": "hide",
+      "D": "hide",
+      "SD": "show",
+      "VP": "show"
+    }
+  }, 
+  { "index": 2,
+    "title": "Influencing Program",
+    "page": 32,
+    "goPage": 32,
+    "type": {
+      "A": "show",
+      "M": "show",
+      "D": "show",
+      "SD": "show",
+      "VP": "show"
+    }
+  },   
+  { "index": 2,
+    "title": "Agile Negotiations Program",
+    "page": 33,
+    "goPage": 33,
+    "type": {
+      "A": "show",
+      "M": "show",
+      "D": "show",
+      "SD": "show",
+      "VP": "show"
+    }
+  },   
     
   { "index": 3,
     "title": "Distribution Center Visit",
-    "page": 31,
-    "goPage": 31,
+    "page": 34,
+    "goPage": 34,
     "type": {
       "A": "show",
       "M": "show",
@@ -329,8 +365,8 @@
   }, 
   { "index": 3,
     "title": "RL Leadershop Sharing",
-    "page": 32,
-    "goPage": 32,
+    "page": 35,
+    "goPage": 35,
     "type": {
       "A": "show",
       "M": "show",
@@ -341,8 +377,8 @@
   }, 
   { "index": 3,
     "title": "RL Putonghua Program",
-    "page": 33,
-    "goPage": 33,
+    "page": 36,
+    "goPage": 36,
     "type": {
       "A": "show",
       "M": "show",
@@ -353,8 +389,8 @@
   }, 
   { "index": 3,
     "title": "Work-life Balance Series",
-    "page": 34,
-    "goPage": 34,
+    "page": 37,
+    "goPage": 37,
     "type": {
       "A": "show",
       "M": "show",
@@ -366,8 +402,8 @@
 
   { "index": 4,
     "title": "New Hire Orientation",
-    "page": 35,
-    "goPage": 35,
+    "page": 38,
+    "goPage": 38,
     "type": {
       "B": "show",
       "A": "show",
@@ -376,8 +412,8 @@
   }, 
   { "index": 4,
     "title": "Art of Selling",
-    "page": 36,
-    "goPage": 36,
+    "page": 39,
+    "goPage": 39,
     "type": {
       "B": "hide",
       "A": "show",
@@ -386,8 +422,8 @@
   }, 
   { "index": 4,
     "title": "Effective Huddle - Store",
-    "page": 37,
-    "goPage": 37,
+    "page": 40,
+    "goPage": 40,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -396,8 +432,8 @@
   }, 
   { "index": 4,
     "title": "Knitting Your Communication",
-    "page": 38,
-    "goPage": 38,
+    "page": 41,
+    "goPage": 41,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -406,8 +442,8 @@
   }, 
   { "index": 4,
     "title": "RL Way - Store<br/><i style = 'font-size:11px'>5C Selling and Service Experiend</i>",
-    "page": 39,
-    "goPage": 39,
+    "page": 42,
+    "goPage": 42,
     "type": {
       "B": "show",
       "A": "show",
@@ -416,8 +452,8 @@
   },
   { "index": 4,
     "title": "Seasonal Product Training - Store",
-    "page": 40,
-    "goPage": 40,
+    "page": 43,
+    "goPage": 43,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -426,8 +462,8 @@
   },   
   { "index": 4,
     "title": "Specific Product Training - Store",
-    "page": 41,
-    "goPage": 41,
+    "page": 44,
+    "goPage": 44,
     "type": {
       "B": "hide",
       "A": "show",
@@ -436,8 +472,8 @@
   }, 
   { "index": 4,
     "title": "Store Managers Development Program",
-    "page": 42,
-    "goPage": 42,
+    "page": 45,
+    "goPage": 45,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -446,8 +482,8 @@
   }, 
   { "index": 4,
     "title": "MBTI in Advance Selling",
-    "page": 43,
-    "goPage": 43,
+    "page": 46,
+    "goPage": 46,
     "type": {
       "B": "hide",
       "A": "show",
@@ -456,8 +492,8 @@
   }, 
   { "index": 5,
     "title": "E-Learning Programs - APAC Languages",
-    "page": 44,
-    "goPage": 44,
+    "page": 47,
+    "goPage": 47,
     "type": {
       "B": "show",
       "A": "show",

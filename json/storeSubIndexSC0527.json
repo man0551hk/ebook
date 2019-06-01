@@ -31,9 +31,19 @@
     }
   },  
   { "index": 1,
-    "title": "销售的艺术<br/>Art of Selling",
+    "title": "我们未来的伟大篇章<br/>Our Next Great Chapter",
     "page": 8,
     "goPage": 8,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },    
+  { "index": 1,
+    "title": "销售的艺术<br/>Art of Selling",
+    "page": 9,
+    "goPage": 9,
     "type": {
       "B": "hide",
       "A": "show",
@@ -41,9 +51,9 @@
     }
   },
   { "index": 1,
-    "title": "有效的晨会<br/>Effective Huddle",
-    "page": 9,
-    "goPage": 9,
+    "title": "高效的简报培训<br/>Effective Huddle",
+    "page": 10,
+    "goPage": 10,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -52,8 +62,8 @@
   },
   { "index": 1,
     "title": "RL方式<br/>RL Way<br/><i style = 'font-size:11px;padding-left:10px;'><i>5C锁售和服务体验<br/><i style = 'font-size:11px;padding-left:10px;'>5C Selling and Service Experience</i>",
-    "page": 10,
-    "goPage": 10,
+    "page": 11,
+    "goPage": 11,
     "type": {
       "B": "show",
       "A": "show",
@@ -62,16 +72,6 @@
   },
   { "index": 1,
     "title": "续效管理系列<br/>Performance Management Series<br/><i style = 'font-size:11px;padding-left:10px;'>发展规划和目标设置</i><br/><i style = 'font-size:11px;padding-left:10px;'>Development Planning and Goal Setting</i>",
-    "page": 11,
-    "goPage": 11,
-    "type": {
-      "B": "hide",
-      "A": "show",
-      "M": "show"
-    }
-  },
-  { "index": 1,
-    "title": "续效管理系列<br/>Performance Management Series<br/><i style = 'font-size:11px;'>评估培训</i><br/><i style = 'font-size:11px;padding-left:10px;'>Appraisal Training</i>",
     "page": 12,
     "goPage": 12,
     "type": {
@@ -81,9 +81,19 @@
     }
   },
   { "index": 1,
-    "title": "组织有效的沟通<br/>Knitting Your Communication",
+    "title": "续效管理系列<br/>Performance Management Series<br/><i style = 'font-size:11px;'>评估培训</i><br/><i style = 'font-size:11px;padding-left:10px;'>Appraisal Training</i>",
     "page": 13,
     "goPage": 13,
+    "type": {
+      "B": "hide",
+      "A": "show",
+      "M": "show"
+    }
+  },
+  { "index": 1,
+    "title": "组织有效的沟通<br/>Knitting Your Communication",
+    "page": 14,
+    "goPage": 14,
     "type": {
       "B": "hide",
       "A": "show",
@@ -92,8 +102,8 @@
   },    
   { "index": 1,
     "title": "发展你的才能<br/>Developing Your Talent",
-    "page": 14,
-    "goPage": 14,
+    "page": 15,
+    "goPage": 15,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -102,8 +112,8 @@
   },    
   { "index": 1,
     "title": "专注于你的个人发展<br/>Focusing on Your Personal Development",
-    "page": 15,
-    "goPage": 15,
+    "page": 16,
+    "goPage": 16,
     "type": {
       "B": "hide",
       "A": "show",
@@ -114,8 +124,8 @@
 
   { "index": 2,
     "title": "提供反馈以培育你的员工<br/>Giving Feedback To Develop Your People",
-    "page": 16,
-    "goPage": 16,
+    "page": 17,
+    "goPage": 17,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -124,8 +134,8 @@
   },
   { "index": 2,
     "title":  "21世纪的领导力 (适合销售后勤人员)<br/>Leadership In The 21st Century (For Associates)",
-    "page": 17,
-    "goPage": 17,
+    "page": 18,
+    "goPage": 18,
     "type": {
       "B": "hide",
       "A": "show",
@@ -134,8 +144,8 @@
   },
   { "index": 2,
     "title": "选才策略工作坊<br/>Selecting High-Caliber Talent",
-    "page": 18,
-    "goPage": 18,
+    "page": 19,
+    "goPage": 19,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -146,8 +156,8 @@
     
   { "index": 3,
     "title": "工作生活平衡系列<br/>Work-life Balance Series",
-    "page": 19,
-    "goPage": 19,
+    "page": 20,
+    "goPage": 20,
     "type": {
       "B": "hide",
       "A": "show",
@@ -156,8 +166,8 @@
   },
   { "index": 3,
     "title": "MBTI - 进阶销售<br/>MBTI in Advance Selling",
-    "page": 20,
-    "goPage": 20,
+    "page": 21,
+    "goPage": 21,
     "type": {
       "B": "hide",
       "A": "show",
@@ -168,8 +178,8 @@
 
   { "index": 4,
     "title": "当季产品培训 - 店铺<br/>Seasonal Product Training - Store",
-    "page": 21,
-    "goPage": 21,
+    "page": 22,
+    "goPage": 22,
     "type": {
       "B": "hide",
       "A": "show",
@@ -178,8 +188,8 @@
   },
   { "index": 4,
     "title": "特殊产品培训 - 店铺<br/>Specific Product Training - Store",
-    "page": 22,
-    "goPage": 22,
+    "page": 23,
+    "goPage": 23,
     "type": {
       "B": "hide",
       "A": "show",
@@ -189,8 +199,8 @@
 
   { "index": 5,
     "title": "店经理发展课程<br/>Store Managers Development Program",
-    "page": 23,
-    "goPage": 23,
+    "page": 24,
+    "goPage": 24,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -199,16 +209,6 @@
   },
   { "index": 5,
     "title": "店铺营运和系统<br/>Store Operation & System",
-    "page": 25,
-    "goPage": 254,
-    "type": {
-      "B": "hide",
-      "A": "hide",
-      "M": "show"
-    }
-  },
-  { "index": 5,
-    "title": "商业知识<br/>Business Knowledge",
     "page": 26,
     "goPage": 26,
     "type": {
@@ -218,7 +218,7 @@
     }
   },
   { "index": 5,
-    "title": "商业技能101<br/>Business Acumen 101",
+    "title": "商业知识<br/>Business Knowledge",
     "page": 27,
     "goPage": 27,
     "type": {
@@ -228,7 +228,7 @@
     }
   },
   { "index": 5,
-    "title": "时间管理和获取成果<br/>Managing Time And Getting Results",
+    "title": "商业技能101<br/>Business Acumen 101",
     "page": 28,
     "goPage": 28,
     "type": {
@@ -238,9 +238,19 @@
     }
   },
   { "index": 5,
-    "title": "领导力精要<br/>Essentials of Leadership",
+    "title": "时间管理和获取成果<br/>Managing Time And Getting Results",
     "page": 29,
     "goPage": 29,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
+  { "index": 5,
+    "title": "领导力精要<br/>Essentials of Leadership",
+    "page": 30,
+    "goPage": 30,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -249,8 +259,8 @@
   },    
   { "index": 5,
     "title": "问题解决与决策<br/>Problem Solving & Decision Making",
-    "page": 30,
-    "goPage": 30,
+    "page": 31,
+    "goPage": 31,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -259,16 +269,6 @@
   },   
   { "index": 5,
     "title": "21世纪的领导力<br/>Leadership in the 21st Century",
-    "page": 31,
-    "goPage": 31,
-    "type": {
-      "B": "hide",
-      "A": "hide",
-      "M": "show"
-    }
-  },
-  { "index": 5,
-    "title": "选才策略工作坊<br/>Selecting High Caliber Talent",
     "page": 32,
     "goPage": 32,
     "type": {
@@ -278,9 +278,19 @@
     }
   },
   { "index": 5,
-    "title": "发展你的才能<br/>Developing Your Talent",
+    "title": "选才策略工作坊<br/>Selecting High Caliber Talent",
     "page": 33,
     "goPage": 33,
+    "type": {
+      "B": "hide",
+      "A": "hide",
+      "M": "show"
+    }
+  },
+  { "index": 5,
+    "title": "发展你的才能<br/>Developing Your Talent",
+    "page": 34,
+    "goPage": 34,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -289,8 +299,8 @@
   },   
   { "index": 5,
     "title": "指导以步向成功<br/>Coaching for Success",
-    "page": 34,
-    "goPage": 34,
+    "page": 35,
+    "goPage": 35,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -299,8 +309,8 @@
   },
   { "index": 5,
     "title": "商业本领和企业家思维<br/>Business Savvy Entrepreneurialship",
-    "page": 35,
-    "goPage": 35,
+    "page": 36,
+    "goPage": 36,
     "type": {
       "B": "hide",
       "A": "hide",
@@ -310,8 +320,8 @@
 
   { "index": 6,
     "title": "网上学习课程 - 亚太地区语言<br/>E-Learning Programs - APAC Languages",
-    "page": 36,
-    "goPage": 36,
+    "page": 37,
+    "goPage": 37,
     "type": {
       "B": "show",
       "A": "show",
