@@ -149,9 +149,9 @@
 
       function LoadImage() {
         for(var i = 1; i <= 45; i++) {
-          var fileName = 'RL(EN)_0527-' + i.toString().padStart(2, '0') + '.jpg';
+          var fileName = 'RL(EN)_0613-' + i.toString().padStart(2, '0') + '.jpg';
           var image = "<div id = 'image" + i + "'  name = 'image" + i + "'>";
-          image += "<img src = 'pdf/RL(EN)_0527/" + fileName + "' class = '" + imageClass + "' />";
+          image += "<img src = 'pdf/RL(EN)_0613/" + fileName + "' class = '" + imageClass + "' />";
           image += "</div>";
           $("#imageDiv").append(image);
         }
@@ -210,7 +210,7 @@
             }
           }
         };
-        xmlhttp.open("GET", "json/officeSubIndex0527.json", true);
+        xmlhttp.open("GET", "json/officeSubIndex0613.json", true);
         xmlhttp.send();
       }
 
