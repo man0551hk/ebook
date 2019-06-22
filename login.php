@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (isset($_POST["password"])) {
+  if ($_POST["password"] == "ralph2@19") {
+    $_SESSION["logined"] = 1;
+    ?><meta http-equiv="refresh" content="0;url=index.php" /><?php
+  }
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -43,7 +52,6 @@
     </script>   
     <style>
        .btn-primary {
-
         color: rgba(108, 88, 179, 0.75);
         letter-spacing: 1px;
         line-height: 15px;
@@ -52,30 +60,74 @@
         background: transparent;
         transition: all 0.3s ease 0s;
       } 
-
+      #desktopGrid {
+        text-align: center; 
+        display:none;
+        margin-top:30px; 
+        background-image: url(images/login.png);
+        background-repeat: no-repeat;
+        background-position: center; 
+        background-size: 1024px 576px;
+        height: 576px;
+        width: 1024px;
+      }
+      #desktopForm {
+        bottom: 90px;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+      }
+      #mobileGrid {
+        text-align: center; 
+        display:none;
+        background-image: url(images/loginMobile.png);
+        background-repeat: no-repeat;
+        background-position: center; 
+        background-size: 370px 652px;
+        height: 652px;
+        width: 370px;
+      }
+      #mobileForm {
+        bottom: 80px;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+      }
+      #password {
+        background-color: #f3f3f3;
+        border-radius: 10px;
+        border: 2px solid #9f9fa1;
+        width: 270px;
+      }
+      .btn-primary {
+        background-color: #f3f3f3;
+        border-radius: 10px;
+        border: 2px solid #9f9fa1;
+        color: #000;
+      }
     </style> 
   </head>
   <body>
     <div class = "container-fluid">
       <div class = "row">
 
-        <div class = "col" style = "text-align: center; display:none;padding-top:30px" id = "desktopGrid">
-            <img src="images/landing_en.png" usemap="#image-map">
-            <form action = "login.php" method = "POST">
-              <input type = "password" value = "" name = "password" id = "password"/>
-              <button type = "submit" class = "btn btn-primary">ENTER</button>
-            </form>
-            <!-- <map name="image-map">
-                <area target="_self" alt="" title="" href="office_staff.html" coords="344,411,496,460" shape="rect">
-                <area target="_self" alt="" title="" href="store_staff.html" coords="530,413,684,460" shape="rect">
-            </map> -->
+        <div class = "col" style = "" id = "desktopGrid">
+            <div id = "desktopForm">
+              <form action = "login.php" method = "POST">
+                <input type = "password" value = "" name = "password" id = "password"/>
+                <div style = "height:10px"></div>
+                <button type = "submit" class = "btn btn-primary">ENTER</button>
+              </form>
+            </div>
         </div>
-        <div class = "col" style = "text-align: center;display:none;padding-right:0px;padding-left:0px;" id = "mobileGrid">
-            <img src="images/landing_en_mobile.png" usemap="#mobile_image-map">
-            <map name="mobile_image-map">
-                <area target="_self" alt="" title="" href="office_staff.html" coords="35,502,175,545" shape="rect">
-                <area target="_self" alt="" title="" href="store_staff.html" coords="207,502,346,545" shape="rect">
-            </map>   
+        <div class = "col" id = "mobileGrid">
+            <div id = "mobileForm">
+              <form action = "login.php" method = "POST">
+                <input type = "password" value = "" name = "password" id = "password"/>
+                <div style = "height:10px"></div>
+                <button type = "submit" class = "btn btn-primary">ENTER</button>
+              </form>
+            </div>
         </div>        
       </div>
     </div>
