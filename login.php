@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_POST["password"])) {
-  if ($_POST["password"] == "ralph2@19") {
+  if ($_POST["password"] == "RalphLaurenLearning") {
     $_SESSION["logined"] = 1;
     ?><meta http-equiv="refresh" content="0;url=index.php" /><?php
   }
