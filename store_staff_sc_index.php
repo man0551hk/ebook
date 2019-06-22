@@ -1,9 +1,7 @@
 <?php
 session_start();
 if ( $_SESSION["logined"] != 1) {
-  ?>
-  <meta http-equiv="refresh" content="0;url=login.php" />
-  <?php
+  header("location: login.php",  true,  301 );  exit;
 }
 ?>
 <!doctype html>
