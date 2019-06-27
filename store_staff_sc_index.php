@@ -337,7 +337,7 @@ if ( $_SESSION["logined"] != 1) {
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id = "navMenu" style = "display:none;">
-      <a class="navbar-brand" href="index.html">Ralph Lauren Employees</a>
+      <a class="navbar-brand" href="index.php">Ralph Lauren Employees</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -345,10 +345,10 @@ if ( $_SESSION["logined"] != 1) {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="office_staff.html">Office Learning Catalogue</a>
+            <a class="nav-link" href="office_staff.php">Office Learning Catalogue</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="store_staff_tc.html">專賣店學習目錄</a>
+              <a class="nav-link" href="store_staff_tc.php">專賣店學習目錄</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="store_staff_sc.html">专卖店学习目录</a>
